@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/* PrehistoricPBJ.cs
+ * Author: Sam Waris
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
@@ -6,10 +9,17 @@ namespace DinoDiner.Menu.Entrees
     {
         private bool peanutButter = true;
         private bool jelly = true;
-
+        /// <summary>
+        /// This is the price property.
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// This is the calorie property.
+        /// </summary>
         public uint Calories { get; set; }
-
+        /// <summary>
+        /// This is the ingredients property.
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -20,18 +30,24 @@ namespace DinoDiner.Menu.Entrees
                 return ingredients;
             }
         }
-
+        /// <summary>
+        /// This is the constructor.
+        /// </summary>
         public PrehistoricPBJ()
         {
             this.Price = 6.52;
             this.Calories = 483;
         }
-
+        /// <summary>
+        /// This holds peanut
+        /// </summary>
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
         }
-
+        /// <summary>
+        /// This holds jel
+        /// </summary>
         public void HoldJelly()
         {
             this.jelly = false;
