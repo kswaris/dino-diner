@@ -7,16 +7,8 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class SteakosaurusBurger
+    public class SteakosaurusBurger : Entree
     {
-        /// <summary>
-        /// This is the price double. It holds the price.
-        /// </summary>
-        public double Price = 5.15;
-        /// <summary>
-        /// This is the uint calories. It holds the calories.
-        /// </summary>
-        public uint Calories = 621;
         /// <summary>
         /// This is the bun bool.
         /// </summary>
@@ -37,10 +29,15 @@ namespace DinoDiner.Menu.Entrees
         /// This is the mustard bool.
         /// </summary>
         private bool mustard = true;
+        public SteakosaurusBurger()
+        {
+            Price = 5.15;
+            Calories = 621;
+        }
         /// <summary>
         /// This is the ingredients, it returns the list.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

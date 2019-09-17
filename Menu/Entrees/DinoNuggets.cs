@@ -8,24 +8,16 @@ using DinoDiner.Menu.Entrees;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class DinoNuggets
+    public class DinoNuggets : Entree
     {
         /// <summary>
         /// This is the nugget uint, it holds nugget count.
         /// </summary>
         private uint Nuggets = 6;
         /// <summary>
-        /// This is the price double, it holds the price.
+        /// This is the ingredients list
         /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// This is the calories uint. It holds the calories.
-        /// </summary>
-        public uint Calories { get; set; }
-        /// <summary>
-        /// This is the ingredients property.
-        /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -42,8 +34,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public DinoNuggets()
         {
-            this.Calories = 59 * Nuggets;
-            this.Price = 4.25;
+            Calories = 59 * Nuggets;
+            Price = 4.25;
         }
         /// <summary>
         /// This is the addnugget method, it adds a nugget.

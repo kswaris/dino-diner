@@ -5,22 +5,20 @@ using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class PrehistoricPBJ
+    public class PrehistoricPBJ : Entree
     {
+        /// <summary>
+        /// This is the peanut butter bool
+        /// </summary>
         private bool peanutButter = true;
+        /// <summary>
+        /// This is the jelly bool
+        /// </summary>
         private bool jelly = true;
         /// <summary>
-        /// This is the price property.
+        /// This is the ingredients list.
         /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// This is the calorie property.
-        /// </summary>
-        public uint Calories { get; set; }
-        /// <summary>
-        /// This is the ingredients property.
-        /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -35,8 +33,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public PrehistoricPBJ()
         {
-            this.Price = 6.52;
-            this.Calories = 483;
+            Price = 6.52;
+            Calories = 483;
         }
         /// <summary>
         /// This holds peanut

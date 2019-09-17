@@ -7,16 +7,8 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class VelociWrap
+    public class VelociWrap : Entree
     {
-        /// <summary>
-        /// This is the price double.
-        /// </summary>
-        public double Price = 6.86;
-        /// <summary>
-        /// This is the calorie uint.
-        /// </summary>
-        public uint Calories = 356;
         /// <summary>
         /// This is the dressing bool.
         /// </summary>
@@ -30,9 +22,17 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         private bool cheese = true;
         /// <summary>
+        /// This is the constructor.
+        /// </summary>
+        public VelociWrap()
+        {
+            Price = 6.86;
+            Calories = 356;
+        }
+        /// <summary>
         /// This is the ingredients list.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

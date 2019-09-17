@@ -42,7 +42,7 @@ namespace DinoDiner.Menu.Sides
         }
         /// <summary>
         /// This is the fryceritop constructor.
-        /// </summary>
+        /// </summary> 
         public Fryceritops()
         {
             base.Calories = 222;

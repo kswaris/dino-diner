@@ -19,16 +19,6 @@
             This is the private onions variable. It is whether not you hold the onions.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Price">
-            <summary>
-            This is the double price. It has getters and setters.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Calories">
-            <summary>
-            This is the uint calories. It has getters and setters.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
             <summary>
             This is the public ingredients property.
@@ -59,19 +49,9 @@
             This is the nugget uint, it holds nugget count.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Price">
-            <summary>
-            This is the price double, it holds the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Calories">
-            <summary>
-            This is the calories uint. It holds the calories.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
             <summary>
-            This is the ingredients property.
+            This is the ingredients list
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.#ctor">
@@ -84,19 +64,34 @@
             This is the addnugget method, it adds a nugget.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Price">
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Calories">
             <summary>
-            This is the price property.
+            This is the calories property.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Calories">
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
             <summary>
-            This is the calorie property.
+            This is the price constructor.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Ingredients">
+            <summary>
+            This is the ingredients list.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Entrees.PrehistoricPBJ.peanutButter">
+            <summary>
+            This is the peanut butter bool
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Entrees.PrehistoricPBJ.jelly">
+            <summary>
+            This is the jelly bool
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
             <summary>
-            This is the ingredients property.
+            This is the ingredients list.
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.#ctor">
@@ -114,16 +109,6 @@
             This holds jel
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.PterodactylWings.Price">
-            <summary>
-            This is the price double. It holds the price.
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Entrees.PterodactylWings.Calories">
-            <summary>
-            This is the uint calories. It holds the calories.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
             <summary>
             This is the ingredients, it returns the list.
@@ -132,16 +117,6 @@
         <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.#ctor">
             <summary>
             This is pterodactylWings constructor.
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.Price">
-            <summary>
-            This is the price double. It holds the price.
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.Calories">
-            <summary>
-            This is the uint calories. It holds the calories.
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.bun">
@@ -192,16 +167,6 @@
         <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldMustard">
             <summary>
             This allows you to hold the mustard.
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.Price">
-            <summary>
-            This is the price double.
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.Calories">
-            <summary>
-            This is the calorie count.
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.bun">
@@ -294,16 +259,6 @@
             This holds the mayo.
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.Price">
-            <summary>
-            This is the price double.
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.Calories">
-            <summary>
-            This is the calorie uint.
-            </summary>
-        </member>
         <member name="F:DinoDiner.Menu.Entrees.VelociWrap.dressing">
             <summary>
             This is the dressing bool.
@@ -317,6 +272,11 @@
         <member name="F:DinoDiner.Menu.Entrees.VelociWrap.cheese">
             <summary>
             This is the cheese bool.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.#ctor">
+            <summary>
+            This is the constructor.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">
@@ -347,7 +307,7 @@
         <member name="M:DinoDiner.Menu.Sides.Fryceritops.#ctor">
             <summary>
             This is the fryceritop constructor.
-            </summary>
+            </summary> 
         </member>
         <member name="P:DinoDiner.Menu.Sides.Fryceritops.Ingredients">
             <summary>

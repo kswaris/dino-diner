@@ -7,16 +7,8 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class TRexKingBurger
+    public class TRexKingBurger : Entree
     {
-        /// <summary>
-        /// This is the price double.
-        /// </summary>
-        public double Price = 8.45;
-        /// <summary>
-        /// This is the calorie count.
-        /// </summary>
-        public uint Calories = 728;
         /// <summary>
         /// This is the bun bool
         /// </summary>
@@ -52,7 +44,7 @@ namespace DinoDiner.Menu.Entrees
         /// <summary>
         /// This is the ingredients list.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -75,7 +67,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public TRexKingBurger()
         {
-            this.Calories = 728;
+            Calories = 728;
+            Price = 8.45;
         }
         /// <summary>
         /// This is the bun.

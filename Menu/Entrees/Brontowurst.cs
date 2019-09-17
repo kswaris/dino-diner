@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 namespace DinoDiner.Menu.Entrees
 {
-    public class Brontowurst
+    public class Brontowurst : Entree
     {
         /// <summary>
         /// This is the private variable, bun. It is whether or not you hold the bun.
@@ -18,20 +18,10 @@ namespace DinoDiner.Menu.Entrees
         /// This is the private onions variable. It is whether not you hold the onions.
         /// </summary>
         private bool onion = true;
-
-        /// <summary>
-        /// This is the double price. It has getters and setters.
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// This is the uint calories. It has getters and setters.
-        /// </summary>
-        public uint Calories { get; set; }
-
         /// <summary>
         /// This is the public ingredients property.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -47,8 +37,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public Brontowurst()
         {
-            this.Price = 5.36;
-            this.Calories = 498;
+            Price = 5.36;
+            Calories = 498;
         }
         /// <summary>
         /// This is the holdbun method. It holds the bun.

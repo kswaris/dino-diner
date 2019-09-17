@@ -7,20 +7,12 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class PterodactylWings
+    public class PterodactylWings : Entree
     {
-        /// <summary>
-        /// This is the price double. It holds the price.
-        /// </summary>
-        public double Price = 7.21;
-        /// <summary>
-        /// This is the uint calories. It holds the calories.
-        /// </summary>
-        public uint Calories = 318;
         /// <summary>
         /// This is the ingredients, it returns the list.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -35,8 +27,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public PterodactylWings()
         {
-            this.Price = 7.21;
-            this.Calories = 318;
+            Price = 7.21;
+            Calories = 318;
         }
     }
 }
