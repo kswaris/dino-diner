@@ -1,17 +1,17 @@
-﻿/* Fryceritops.cs
+﻿/* Triceritots.cs
  * Author: Sam Waris
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu.Sides 
 {
-    public class Fryceritops : Side
+    public class Triceritots : Side
     {
         private Size size;
         /// <summary>
-        /// This is the size property.
+        /// This is the size property for triceritots.
         /// </summary>
         public override Size Size
         {
@@ -22,34 +22,34 @@ namespace DinoDiner.Menu.Sides
             set
             {
                 size = value;
-                switch(size)
+                switch (size)
                 {
                     default:
                     case Size.Small:
                         Price = 0.99;
-                        Calories = 222;
+                        Calories = 352;
                         break;
                     case Size.Medium:
                         Price = 1.45;
-                        Calories = 365;
+                        Calories = 410;
                         break;
                     case Size.Large:
                         Price = 1.95;
-                        Calories = 480;
+                        Calories = 590;
                         break;
                 }
             }
         }
         /// <summary>
-        /// This is the fryceritop constructor.
+        /// This is the default constructor.
         /// </summary>
-        public Fryceritops()
+        public Triceritots()
         {
-            base.Calories = 222;
+            base.Calories = 352;
             base.Price = 0.99;
         }
         /// <summary>
-        /// This is the ingredients thing.
+        /// This is the ingredients list.
         /// </summary>
         public List<string> Ingredients
         {
@@ -58,7 +58,7 @@ namespace DinoDiner.Menu.Sides
                 List<string> ingredients = new List<string>();
                 ingredients.Add("Potato");
                 ingredients.Add("Salt");
-                ingredients.Add("Vegetable Oil");
+                ingredients.Add("Vegetable Oil"); ;
                 return ingredients;
             }
         }

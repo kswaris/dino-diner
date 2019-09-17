@@ -1,4 +1,4 @@
-﻿/* Fryceritops.cs
+﻿/* MeteorMacAndCheese.cs
  * Author: Sam Waris
  */
 using System;
@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
-    public class Fryceritops : Side
+    public class MeteorMacAndCheese : Side
     {
         private Size size;
         /// <summary>
@@ -22,30 +22,30 @@ namespace DinoDiner.Menu.Sides
             set
             {
                 size = value;
-                switch(size)
+                switch (size)
                 {
                     default:
                     case Size.Small:
                         Price = 0.99;
-                        Calories = 222;
+                        Calories = 420;
                         break;
                     case Size.Medium:
                         Price = 1.45;
-                        Calories = 365;
+                        Calories = 490;
                         break;
                     case Size.Large:
                         Price = 1.95;
-                        Calories = 480;
+                        Calories = 520;
                         break;
                 }
             }
         }
         /// <summary>
-        /// This is the fryceritop constructor.
+        /// This is the MeteorMacAndCheese constructor.
         /// </summary>
-        public Fryceritops()
+        public MeteorMacAndCheese()
         {
-            base.Calories = 222;
+            base.Calories = 420;
             base.Price = 0.99;
         }
         /// <summary>
@@ -56,9 +56,9 @@ namespace DinoDiner.Menu.Sides
             get
             {
                 List<string> ingredients = new List<string>();
-                ingredients.Add("Potato");
-                ingredients.Add("Salt");
-                ingredients.Add("Vegetable Oil");
+                ingredients.Add("Macaroni Noodles");
+                ingredients.Add("Cheese Product");
+                ingredients.Add("Pork Sausage");;
                 return ingredients;
             }
         }
