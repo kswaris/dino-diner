@@ -8,6 +8,9 @@ using DinoDiner.Menu.Entrees;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// This is the dinonuggets class.
+    /// </summary>
     public class DinoNuggets : Entree
     {
         /// <summary>

@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// This is the steakosaurus burger class
+    /// </summary>
     public class SteakosaurusBurger : Entree
     {
         /// <summary>
@@ -29,6 +32,9 @@ namespace DinoDiner.Menu.Entrees
         /// This is the mustard bool.
         /// </summary>
         private bool mustard = true;
+        /// <summary>
+        /// Steakosaurus Constructor
+        /// </summary>
         public SteakosaurusBurger()
         {
             Price = 5.15;

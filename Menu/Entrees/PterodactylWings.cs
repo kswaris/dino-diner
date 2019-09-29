@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// This is the pterodacylwings class
+    /// </summary>
     public class PterodactylWings : Entree
     {
         /// <summary>
@@ -16,9 +19,11 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>();
-                ingredients.Add("Chicken");
-                ingredients.Add("Wing Sauce");
+                List<string> ingredients = new List<string>
+                {
+                    "Chicken",
+                    "Wing Sauce"
+                };
                 return ingredients;
             }
         }

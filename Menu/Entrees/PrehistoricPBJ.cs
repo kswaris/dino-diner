@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// This is the prehistoricpbj class
+    /// </summary>
     public class PrehistoricPBJ : Entree
     {
         /// <summary>

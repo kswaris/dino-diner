@@ -4,6 +4,9 @@
 using System.Collections.Generic;
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// This is the brontowurst class.
+    /// </summary>
     public class Brontowurst : Entree
     {
         /// <summary>

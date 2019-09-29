@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MeteorMacAndCheese : Side
     {
         private Size size;
@@ -51,14 +54,17 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// This is the ingredients thing.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
-                List<string> ingredients = new List<string>();
-                ingredients.Add("Macaroni Noodles");
-                ingredients.Add("Cheese Product");
-                ingredients.Add("Pork Sausage");;
+                List<string> ingredients = new List<string>
+                {
+                    "Macaroni Noodles",
+                    "Cheese Product",
+                    "Pork Sausage"
+                };
+                ;
                 return ingredients;
             }
         }

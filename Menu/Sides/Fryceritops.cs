@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// This is the fryceritops 
+    /// </summary>
     public class Fryceritops : Side
     {
         private Size size;
@@ -51,14 +54,16 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// This is the ingredients thing.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
-                List<string> ingredients = new List<string>();
-                ingredients.Add("Potato");
-                ingredients.Add("Salt");
-                ingredients.Add("Vegetable Oil");
+                List<string> ingredients = new List<string>
+                {
+                    "Potato",
+                    "Salt",
+                    "Vegetable Oil"
+                };
                 return ingredients;
             }
         }

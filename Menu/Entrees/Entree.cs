@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// Entree Class.
+    /// </summary>
     public abstract class Entree
     {
         /// <summary>

@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// This is the trexkingburger class
+    /// </summary>
     public class TRexKingBurger : Entree
     {
         /// <summary>

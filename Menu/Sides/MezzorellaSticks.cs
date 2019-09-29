@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// This ist the mozzerella sticks class
+    /// </summary>
     public class MezzorellaSticks : Side
     {
         private Size size;
@@ -51,14 +54,17 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// This is the ingredients list.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
-                List<string> ingredients = new List<string>();
-                ingredients.Add("Cheese Product");
-                ingredients.Add("Breading");
-                ingredients.Add("Vegetable Oil"); ;
+                List<string> ingredients = new List<string>
+                {
+                    "Cheese Product",
+                    "Breading",
+                    "Vegetable Oil"
+                };
+                ;
                 return ingredients;
             }
         }

@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// Velociwrap Class
+    /// </summary>
     public class VelociWrap : Entree
     {
         /// <summary>

@@ -4,6 +4,261 @@
         <name>Menu</name>
     </assembly>
     <members>
+        <member name="T:DinoDiner.Menu.Drinks.Size">
+            <summary>
+            This is the size enum. IT houses the size
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Size.Small">
+            <summary>
+            Small drink enum.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Size.Medium">
+            <summary>
+            Medium Drink enum.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Size.Large">
+            <summary>
+            Large drink enum.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Drink">
+            <summary>
+            Drinks class.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Price">
+            <summary>
+            This is the price double, it holds the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Calories">
+            <summary>
+            This is the calories uint, it has properties.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ingredients">
+            <summary>
+            This is the ingreidents list. It has a getter.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Size">
+            <summary>
+            This is the size property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ice">
+            <summary>
+            This is the ice getter/setter.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Drink.HoldIce">
+            <summary>
+            THis holds the ice.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.JurrasicJava">
+            <summary>
+            This is the jurrassicJava Class
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.#ctor">
+            <summary>
+            This is the basic no argument constructor.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.JurrasicJava.size">
+            <summary>
+            This is the size Size.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.JurrasicJava.roomForCream">
+            <summary>
+            This is the roomforcream bool.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.RoomForCream">
+            <summary>
+            This is the roomforcream property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Decaf">
+            <summary>
+            This is the decaf property.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.AddIce">
+            <summary>
+            This is the addice method.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.LeaveRoomForCream">
+            <summary>
+            This is the leaveroomforcream method.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Size">
+            <summary>
+            this is the size property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Ingredients">
+            <summary>
+            This is the ingredients property. it returns it.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Sodasaurus">
+            <summary>
+            This is the sodasaurus class.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Flavor">
+            <summary>
+            This is the flavor property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Size">
+            <summary>
+            This is the size property.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Sodasaurus.#ctor">
+            <summary>
+            Sodasaurus Constructor
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Ingredients">
+            <summary>
+            This is the ingredients override.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Flavor">
+            <summary>
+            This is the sodasaurus flavor enum
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavor.Cola">
+            <summary>
+            Cola Flavor
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavor.Orange">
+            <summary>
+            Orange Flavor
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavor.Vanilla">
+            <summary>
+            Vanilla Flavor
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavor.Chocolate">
+            <summary>
+            Chocolate Flavor
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavor.RootBeer">
+            <summary>
+            RootBeer Flavor
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavor.Cherry">
+            <summary>
+            Cherry flavor
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavor.Lime">
+            <summary>
+            Lime flavor
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Tyrannotea">
+            <summary>
+            Tyrannotea class
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Tyrannotea.sweet">
+            <summary>
+            This is the sweet bool.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Tyrannotea.lemon">
+            <summary>
+            This is the lemon bool.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Tyrannotea.size">
+            <summary>
+            This is the Size, size.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.#ctor">
+            <summary>
+            This is the trannotea constructor with no arguments.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Sweet">
+            <summary>
+            This is the sweet property. YOu can get/set the tea's sweetness
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Lemon">
+            <summary>
+            This is the lemon property, you can get/set the lemon.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Size">
+            <summary>
+            This is the size property, it has getters/setters for the size
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Ingredients">
+            <summary>
+            This is the ingredients method, it returns the ingredients.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.AddLemon">
+            <summary>
+            This is the addlemon method, it adds a lemon.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Water">
+            <summary>
+            This is the water class.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.#ctor">
+            <summary>
+            This is the no argument constructor.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Lemon">
+            <summary>
+            This is the lemon property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Size">
+            <summary>
+            This is the size property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Ingredients">
+            <summary>
+            This is the ingredients property, it brings things.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.AddLemon">
+            <summary>
+            This is the add lemon method.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
+            <summary>
+            This is the brontowurst class.
+            </summary>
+        </member>
         <member name="F:DinoDiner.Menu.Entrees.Brontowurst.bun">
             <summary>
             This is the private variable, bun. It is whether or not you hold the bun.
@@ -44,6 +299,11 @@
             This is the holdonions method. It holds the onions.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Entrees.DinoNuggets">
+            <summary>
+            This is the dinonuggets class.
+            </summary>
+        </member>
         <member name="F:DinoDiner.Menu.Entrees.DinoNuggets.Nuggets">
             <summary>
             This is the nugget uint, it holds nugget count.
@@ -64,6 +324,11 @@
             This is the addnugget method, it adds a nugget.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Entrees.Entree">
+            <summary>
+            Entree Class.
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Entrees.Entree.Calories">
             <summary>
             This is the calories property.
@@ -77,6 +342,11 @@
         <member name="P:DinoDiner.Menu.Entrees.Entree.Ingredients">
             <summary>
             This is the ingredients list.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
+            <summary>
+            This is the prehistoricpbj class
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Entrees.PrehistoricPBJ.peanutButter">
@@ -109,6 +379,11 @@
             This holds jel
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Entrees.PterodactylWings">
+            <summary>
+            This is the pterodacylwings class
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
             <summary>
             This is the ingredients, it returns the list.
@@ -117,6 +392,11 @@
         <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.#ctor">
             <summary>
             This is pterodactylWings constructor.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
+            <summary>
+            This is the steakosaurus burger class
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.bun">
@@ -144,6 +424,11 @@
             This is the mustard bool.
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.#ctor">
+            <summary>
+            Steakosaurus Constructor
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
             <summary>
             This is the ingredients, it returns the list.
@@ -167,6 +452,11 @@
         <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldMustard">
             <summary>
             This allows you to hold the mustard.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
+            <summary>
+            This is the trexkingburger class
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.bun">
@@ -259,6 +549,11 @@
             This holds the mayo.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Entrees.VelociWrap">
+            <summary>
+            Velociwrap Class
+            </summary>
+        </member>
         <member name="F:DinoDiner.Menu.Entrees.VelociWrap.dressing">
             <summary>
             This is the dressing bool.
@@ -299,6 +594,11 @@
             This holds the cheese.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Sides.Fryceritops">
+            <summary>
+            This is the fryceritops 
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Sides.Fryceritops.Size">
             <summary>
             This is the size property.
@@ -312,6 +612,11 @@
         <member name="P:DinoDiner.Menu.Sides.Fryceritops.Ingredients">
             <summary>
             This is the ingredients thing.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
+            <summary>
+            
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Size">
@@ -329,6 +634,11 @@
             This is the ingredients thing.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Sides.MezzorellaSticks">
+            <summary>
+            This ist the mozzerella sticks class
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Size">
             <summary>
             This is the size property.
@@ -342,6 +652,31 @@
         <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Ingredients">
             <summary>
             This is the ingredients list.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Size">
+            <summary>
+            Size property.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Size.Small">
+            <summary>
+            Small enum
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Size.Medium">
+            <summary>
+            Small medium
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Size.Large">
+            <summary>
+            Large enum
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Side">
+            <summary>
+            Side class
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Sides.Side.Price">
@@ -362,6 +697,11 @@
         <member name="P:DinoDiner.Menu.Sides.Side.Size">
             <summary>
             Gets or sets the size
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Triceritots">
+            <summary>
+            This is the triceritots class.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Sides.Triceritots.Size">
