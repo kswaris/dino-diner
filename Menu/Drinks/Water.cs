@@ -1,16 +1,17 @@
 ﻿/* Water.cs
  * Author: Sam Waris
+ * This is the water class, it does the bare minimum.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the water class.
     /// </summary>
-    public class Water : Drink
+    public class Water : Drink, IMenuItem
     {
         /// <summary>
         /// This is the no argument constructor.
@@ -63,6 +64,14 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             Lemon = true;
+        }
+        /// <summary>
+        /// This is the major tostring
+        /// </summary>
+        /// <returns>this is the string you return.</returns>
+        public override string ToString()
+        {
+            return this.size.ToString() + " Water";
         }
     }
 }

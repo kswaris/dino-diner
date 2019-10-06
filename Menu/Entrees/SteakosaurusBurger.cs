@@ -1,16 +1,17 @@
 ﻿/* SteakosaurusBurger.cs
  * Author: Sam Waris
+ * This is the steakosaurusburger class. It houses things about the steakburger.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the steakosaurus burger class
     /// </summary>
-    public class SteakosaurusBurger : Entree
+    public class SteakosaurusBurger : Entree, IMenuItem
     {
         /// <summary>
         /// This is the bun bool.
@@ -83,6 +84,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldMustard()
         {
             mustard = false;
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return "Steakosaurus Burger";
         }
     }
 }

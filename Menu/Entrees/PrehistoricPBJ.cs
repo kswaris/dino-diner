@@ -1,14 +1,15 @@
 ﻿/* PrehistoricPBJ.cs
  * Author: Sam Waris
+ * This is the prehistoricPBJ class. It has information about the pbj sandwich.
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the prehistoricpbj class
     /// </summary>
-    public class PrehistoricPBJ : Entree
+    public class PrehistoricPBJ : Entree, IMenuItem
     {
         /// <summary>
         /// This is the peanut butter bool
@@ -52,6 +53,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldJelly()
         {
             this.jelly = false;
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return "Prehistoric PB & J";
         }
     }
 }

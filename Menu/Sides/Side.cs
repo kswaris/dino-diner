@@ -1,31 +1,17 @@
-﻿using System;
+﻿/* Side.cs
+ * Sam Waris
+ * The side class. IT has the side base class.
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
-    /// <summary>
-    /// Size property.
-    /// </summary>
-    public enum Size
-    {
-        /// <summary>
-        /// Small enum
-        /// </summary>
-        Small,
-        /// <summary>
-        /// Small medium
-        /// </summary>
-        Medium,
-        /// <summary>
-        /// Large enum
-        /// </summary>
-        Large
-    }
     /// <summary>
     /// Side class
     /// </summary>
-    public abstract class Side
+    public abstract class Side: IMenuItem
     {
         /// <summary>
         /// Gets and sets the price

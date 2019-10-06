@@ -1,16 +1,17 @@
 ﻿/* Triceritots.cs
  * Author: Sam Waris
+ * This is the triceritots base class. It extends the side.cs
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides 
+namespace DinoDiner.Menu 
 {
     /// <summary>
     /// This is the triceritots class.
     /// </summary>
-    public class Triceritots : Side
+    public class Triceritots : Side, IMenuItem
     {
         private Size size;
         /// <summary>
@@ -48,6 +49,7 @@ namespace DinoDiner.Menu.Sides
         /// </summary>
         public Triceritots()
         {
+            Size = Size.Small;
             base.Calories = 352;
             base.Price = 0.99;
         }
@@ -67,6 +69,14 @@ namespace DinoDiner.Menu.Sides
                 ;
                 return ingredients;
             }
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return this.size.ToString() + " Triceritots";
         }
     }
 }

@@ -1,16 +1,17 @@
 ﻿/* Fryceritops.cs
  * Author: Sam Waris
+ * This is the fryceritops class. It extends the side.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the fryceritops 
     /// </summary>
-    public class Fryceritops : Side
+    public class Fryceritops : Side, IMenuItem
     {
         private Size size;
         /// <summary>
@@ -66,6 +67,14 @@ namespace DinoDiner.Menu.Sides
                 };
                 return ingredients;
             }
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return this.size.ToString() + " Fryceritops";
         }
     }
 }

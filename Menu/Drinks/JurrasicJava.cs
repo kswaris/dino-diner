@@ -1,16 +1,17 @@
 ﻿/* JurrasicJava.cs
  * Author: Sam Waris
+ * This is the jurrasicJava class. It houses coffee things.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the jurrassicJava Class
     /// </summary>
-    public class JurrasicJava : Drink
+    public class JurrasicJava : Drink, IMenuItem
     {
         /// <summary>
         /// This is the basic no argument constructor.
@@ -116,6 +117,18 @@ namespace DinoDiner.Menu.Drinks
                 };
                 return ingredients;
             }
+        }
+        /// <summary>
+        /// This is the tostring method.
+        /// </summary>
+        /// <returns>This is the overriden string.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.size.ToString());
+            if (decaf) sb.Append(" Decaf");
+            sb.Append(" Jurassic Java");
+            return sb.ToString();
         }
     }
 }

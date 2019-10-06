@@ -1,16 +1,17 @@
 ﻿/* Tyrannotea.cs
  * Author: Sam Waris
+ * This is the tyrannotea class. It has things that relate to tea.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Tyrannotea class
     /// </summary>
-    public class Tyrannotea : Drink
+    public class Tyrannotea : Drink, IMenuItem
     {
         /// <summary>
         /// This is the sweet bool.
@@ -118,6 +119,17 @@ namespace DinoDiner.Menu.Drinks
         {
             Lemon = true;
         }
-        
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.size.ToString());
+            if (sweet) sb.Append(" Sweet");
+            sb.Append("Tyrannotea");
+            return sb.ToString();
+        }
     }
 }

@@ -1,16 +1,17 @@
 ﻿/* TRexKingBurger.cs
  * Author: Sam Waris
+ * This is the trexkingburger. It houses things about the burger and extends entree.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the trexkingburger class
     /// </summary>
-    public class TRexKingBurger : Entree
+    public class TRexKingBurger : Entree, IMenuItem
     {
         /// <summary>
         /// This is the bun bool
@@ -128,6 +129,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldMayo()
         {
             mayo = false;
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return "T-Rex King Burger";
         }
     }
 }

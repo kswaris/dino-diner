@@ -1,16 +1,17 @@
 ﻿/* MeteorMacAndCheese.cs
  * Author: Sam Waris
+ * This is the meteor mac and cheese class. it extends sides.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// 
     /// </summary>
-    public class MeteorMacAndCheese : Side
+    public class MeteorMacAndCheese : Side, IMenuItem
     {
         private Size size;
         /// <summary>
@@ -67,6 +68,14 @@ namespace DinoDiner.Menu.Sides
                 ;
                 return ingredients;
             }
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return this.size.ToString() + " Meteor Mac & Cheese";
         }
     }
 }

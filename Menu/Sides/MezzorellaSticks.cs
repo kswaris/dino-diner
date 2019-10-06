@@ -1,16 +1,17 @@
 ﻿/* MezzorellaSticks.cs
  * Author: Sam Waris
+ * this is the mezzorellasticks class. It extend sthe side class.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This ist the mozzerella sticks class
     /// </summary>
-    public class MezzorellaSticks : Side
+    public class MezzorellaSticks : Side, IMenuItem
     {
         private Size size;
         /// <summary>
@@ -67,6 +68,14 @@ namespace DinoDiner.Menu.Sides
                 ;
                 return ingredients;
             }
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return this.size.ToString() + " Mezzorella Sticks";
         }
     }
 

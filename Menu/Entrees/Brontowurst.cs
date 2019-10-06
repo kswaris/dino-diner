@@ -1,13 +1,14 @@
 ﻿/* Brontowurst.cs
  * Author: Sam Waris
+ * This is the brontowurst class. It houses things about a brontowurst.
  */
 using System.Collections.Generic;
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the brontowurst class.
     /// </summary>
-    public class Brontowurst : Entree
+    public class Brontowurst : Entree, IMenuItem
     {
         /// <summary>
         /// This is the private variable, bun. It is whether or not you hold the bun.
@@ -63,6 +64,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldOnion()
         {
             this.onion = false;
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return "Brontowurst";
         }
     }
 }

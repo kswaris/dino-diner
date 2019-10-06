@@ -1,17 +1,51 @@
 ﻿/* Sodasaurus.cs
  * Author: Sam Waris
+ * This is the Flavor Sodasaurus class. It has things.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks 
+namespace DinoDiner.Menu
 {
-   
+    /// <summary>
+    /// Enum Flavor
+    /// </summary>
+    public enum Flavor
+    {
+        /// <summary>
+        /// Cola Flavor
+        /// </summary>
+        Cola,
+        /// <summary>
+        /// Orange Flavor
+        /// </summary>
+        Orange,
+        /// <summary>
+        /// Vanilla Flavor
+        /// </summary>
+        Vanilla,
+        /// <summary>
+        /// Chocolate Flavor
+        /// </summary>
+        Chocolate,
+        /// <summary>
+        /// RootBeer Flavor
+        /// </summary>
+        RootBeer,
+        /// <summary>
+        /// Cherry flavor
+        /// </summary>
+        Cherry,
+        /// <summary>
+        /// Lime flavor
+        /// </summary>
+        Lime
+    }
     /// <summary>
     /// This is the sodasaurus class.
     /// </summary>
-    public class Sodasaurus : Drink
+    public class Sodasaurus : Drink, IMenuItem
     {
         private Size size;
         private Flavor flavor;
@@ -82,6 +116,18 @@ namespace DinoDiner.Menu.Drinks
                 };
                 return ingredients;
             }
+        }
+        /// <summary>
+        /// This is the tostring method.
+        /// </summary>
+        /// <returns>This overrides the tostring.</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.size.ToString());
+            sb.Append(this.flavor.ToString());
+            sb.Append(" Sodasaurus");
+            return sb.ToString();
         }
     }
 }

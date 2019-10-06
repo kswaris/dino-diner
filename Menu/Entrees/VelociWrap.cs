@@ -1,16 +1,17 @@
 ﻿/* Velociwrap.cs
  * Author: Sam Waris
+ * This is the velociwrap class. It extends entree.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Velociwrap Class
     /// </summary>
-    public class VelociWrap : Entree
+    public class VelociWrap : Entree, IMenuItem
     {
         /// <summary>
         /// This is the dressing bool.
@@ -68,6 +69,14 @@ namespace DinoDiner.Menu.Entrees
         public void HoldCheese()
         {
             cheese = false;
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return "Veloci-wrap";
         }
     }
 }

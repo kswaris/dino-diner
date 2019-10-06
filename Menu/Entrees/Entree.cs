@@ -1,16 +1,17 @@
 ﻿/* Entree.cs
  * Author: Sam Waris
+ * This is the entree class, it is the bas eclass for entrees.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Entree Class.
     /// </summary>
-    public abstract class Entree
+    public abstract class Entree : IMenuItem
     {
         /// <summary>
         /// This is the calories property.

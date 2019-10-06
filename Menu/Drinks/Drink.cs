@@ -1,34 +1,17 @@
 ﻿/* Drink.cs
  * Author: Sam Waris
+ * This is the drink.cs class It houses drink things.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
-    /// <summary>
-    /// This is the size enum. IT houses the size
-    /// </summary>
-    public enum Size
-    {
-        /// <summary>
-        /// Small drink enum.
-        /// </summary>
-        Small,
-        /// <summary>
-        /// Medium Drink enum.
-        /// </summary>
-        Medium,
-        /// <summary>
-        /// Large drink enum.
-        /// </summary>
-        Large
-    }
     /// <summary>
     /// Drinks class.
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IMenuItem
     {
         /// <summary>
         /// This is the price double, it holds the price.

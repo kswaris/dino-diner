@@ -1,17 +1,17 @@
 ﻿/* DinoNuggets.cs
  * Author: Sam Waris
+ * This is the dinonuggets class. it has information about dino nuggets.
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
-using DinoDiner.Menu.Entrees;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the dinonuggets class.
     /// </summary>
-    public class DinoNuggets : Entree
+    public class DinoNuggets : Entree, IMenuItem
     {
         /// <summary>
         /// This is the nugget uint, it holds nugget count.
@@ -48,6 +48,14 @@ namespace DinoDiner.Menu.Entrees
             Nuggets++;
             Calories += 59;
             Price += .25;
+        }
+        /// <summary>
+        /// This is the overridden tostring method.
+        /// </summary>
+        /// <returns>This is the string</returns>
+        public override string ToString()
+        {
+            return "DinoNuggets";
         }
     }
 }
