@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Enum Flavor
     /// </summary>
-    public enum Flavor
+    public enum SodasaurusFlavor
     {
         /// <summary>
         /// Cola Flavor
@@ -48,11 +48,11 @@ namespace DinoDiner.Menu
     public class Sodasaurus : Drink, IMenuItem
     {
         private Size size;
-        private Flavor flavor;
+        private SodasaurusFlavor flavor;
         /// <summary>
         /// This is the flavor property.
         /// </summary>
-        public Flavor Flavor
+        public SodasaurusFlavor Flavor
         {
             get
             {
@@ -98,7 +98,7 @@ namespace DinoDiner.Menu
         public Sodasaurus()
         {
             Size = Size.Small;
-            Flavor = Flavor.Cola;
+            Flavor = SodasaurusFlavor.Cola;
             Ice = true;
         }
         /// <summary>

@@ -91,98 +91,98 @@
             THis holds the ice.
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.JurrasicJava">
+        <member name="T:DinoDiner.Menu.JurassicJava">
             <summary>
             This is the jurrassicJava Class
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.JurrasicJava.#ctor">
+        <member name="M:DinoDiner.Menu.JurassicJava.#ctor">
             <summary>
             This is the basic no argument constructor.
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.JurrasicJava.size">
+        <member name="F:DinoDiner.Menu.JurassicJava.size">
             <summary>
             This is the size Size.
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.JurrasicJava.roomForCream">
+        <member name="F:DinoDiner.Menu.JurassicJava.roomForCream">
             <summary>
             This is the roomforcream bool.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.JurrasicJava.RoomForCream">
+        <member name="P:DinoDiner.Menu.JurassicJava.RoomForCream">
             <summary>
             This is the roomforcream property.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.JurrasicJava.Decaf">
+        <member name="P:DinoDiner.Menu.JurassicJava.Decaf">
             <summary>
             This is the decaf property.
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.JurrasicJava.AddIce">
+        <member name="M:DinoDiner.Menu.JurassicJava.AddIce">
             <summary>
             This is the addice method.
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.JurrasicJava.LeaveRoomForCream">
+        <member name="M:DinoDiner.Menu.JurassicJava.LeaveRoomForCream">
             <summary>
             This is the leaveroomforcream method.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.JurrasicJava.Size">
+        <member name="P:DinoDiner.Menu.JurassicJava.Size">
             <summary>
             this is the size property.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.JurrasicJava.Ingredients">
+        <member name="P:DinoDiner.Menu.JurassicJava.Ingredients">
             <summary>
             This is the ingredients property. it returns it.
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.JurrasicJava.ToString">
+        <member name="M:DinoDiner.Menu.JurassicJava.ToString">
             <summary>
             This is the tostring method.
             </summary>
             <returns>This is the overriden string.</returns>
         </member>
-        <member name="T:DinoDiner.Menu.Flavor">
+        <member name="T:DinoDiner.Menu.SodasaurusFlavor">
             <summary>
             Enum Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Flavor.Cola">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cola">
             <summary>
             Cola Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Flavor.Orange">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Orange">
             <summary>
             Orange Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Flavor.Vanilla">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Vanilla">
             <summary>
             Vanilla Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Flavor.Chocolate">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Chocolate">
             <summary>
             Chocolate Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Flavor.RootBeer">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.RootBeer">
             <summary>
             RootBeer Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Flavor.Cherry">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cherry">
             <summary>
             Cherry flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Flavor.Lime">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Lime">
             <summary>
             Lime flavor
             </summary>

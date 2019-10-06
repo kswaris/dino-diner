@@ -11,12 +11,12 @@ namespace DinoDiner.Menu
     /// <summary>
     /// This is the jurrassicJava Class
     /// </summary>
-    public class JurrasicJava : Drink, IMenuItem
+    public class JurassicJava : Drink, IMenuItem
     {
         /// <summary>
         /// This is the basic no argument constructor.
         /// </summary>
-        public JurrasicJava()
+        public JurassicJava()
         {
             Size = Size.Small;
             RoomForCream = false;

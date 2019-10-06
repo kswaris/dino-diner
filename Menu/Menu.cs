@@ -36,7 +36,7 @@ namespace DinoDiner.Menu
             get
             {
                 List<Drink> items = new List<Drink>();
-                items.Add(new JurrasicJava());
+                items.Add(new JurassicJava());
                 items.Add(new Sodasaurus());
                 items.Add(new Tyrannotea());
                 items.Add(new Water());
