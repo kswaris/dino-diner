@@ -105,5 +105,13 @@ namespace MenuTest.Drinks
             t.Size = Size.Large;
             Assert.Equal<uint>(32, t.Calories);
         }
+        [Fact]
+        public void DefaultIngredients()
+        {
+            Tyrannotea t = new Tyrannotea();
+            Assert.Contains<string>("Water", t.Ingredients);
+            Assert.Contains<string>("Tea", t.Ingredients);
+            Assert.Equal<int>(2, t.Ingredients.Count);
+        }
     }
 }

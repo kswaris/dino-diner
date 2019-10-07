@@ -19,7 +19,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Gets and sets the side
         /// </summary>
-        public Side Side { get; set; } = new Fryceritops();
+        public Side Side { get; set; } = new Friceritops();
         /// <summary>
         /// Gets and sets the drink
         /// </summary>
@@ -85,7 +85,7 @@ namespace DinoDiner.Menu
         /// <returns>This is the overridden tostring.</returns>
         public override string ToString()
         {
-            return this.Entree.ToString() + "Combo";
+            return this.Entree.ToString() + " Combo";
         }
     }
 }

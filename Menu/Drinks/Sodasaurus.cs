@@ -111,7 +111,7 @@ namespace DinoDiner.Menu
                 List<string> ingredients = new List<string>
                 {
                     "Water",
-                    "Natural Flavor",
+                    "Natural Flavors",
                     "Cane Sugar"
                 };
                 return ingredients;
@@ -125,6 +125,7 @@ namespace DinoDiner.Menu
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(this.size.ToString());
+            sb.Append(" ");
             sb.Append(this.flavor.ToString());
             sb.Append(" Sodasaurus");
             return sb.ToString();

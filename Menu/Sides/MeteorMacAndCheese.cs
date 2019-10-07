@@ -75,7 +75,7 @@ namespace DinoDiner.Menu
         /// <returns>This is the string</returns>
         public override string ToString()
         {
-            return this.size.ToString() + " Meteor Mac & Cheese";
+            return this.size.ToString() + " Meteor Mac and Cheese";
         }
     }
 }

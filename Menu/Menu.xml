@@ -748,27 +748,27 @@
             </summary>
             <returns>This string contains information.</returns>
         </member>
-        <member name="T:DinoDiner.Menu.Fryceritops">
+        <member name="T:DinoDiner.Menu.Friceritops">
             <summary>
-            This is the fryceritops 
+            This is the Friceritops 
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Fryceritops.Size">
+        <member name="P:DinoDiner.Menu.Friceritops.Size">
             <summary>
             This is the size property.
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Fryceritops.#ctor">
+        <member name="M:DinoDiner.Menu.Friceritops.#ctor">
             <summary>
             This is the fryceritop constructor.
             </summary> 
         </member>
-        <member name="P:DinoDiner.Menu.Fryceritops.Ingredients">
+        <member name="P:DinoDiner.Menu.Friceritops.Ingredients">
             <summary>
             This is the ingredients thing.
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Fryceritops.ToString">
+        <member name="M:DinoDiner.Menu.Friceritops.ToString">
             <summary>
             This is the overridden tostring method.
             </summary>

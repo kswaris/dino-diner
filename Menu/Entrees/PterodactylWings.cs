@@ -42,7 +42,7 @@ namespace DinoDiner.Menu
         /// <returns>This is the string</returns>
         public override string ToString()
         {
-            return "PterodactylWings";
+            return "Pterodactyl Wings";
         }
     }
 }

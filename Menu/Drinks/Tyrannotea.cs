@@ -128,7 +128,7 @@ namespace DinoDiner.Menu
             StringBuilder sb = new StringBuilder();
             sb.Append(this.size.ToString());
             if (sweet) sb.Append(" Sweet");
-            sb.Append("Tyrannotea");
+            sb.Append(" Tyrannotea");
             return sb.ToString();
         }
     }

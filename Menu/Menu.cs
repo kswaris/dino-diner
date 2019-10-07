@@ -51,7 +51,7 @@ namespace DinoDiner.Menu
             get
             {
                 List<Side> s = new List<Side>();
-                s.Add(new Fryceritops());
+                s.Add(new Friceritops());
                 s.Add(new MeteorMacAndCheese());
                 s.Add(new MezzorellaSticks());
                 s.Add(new Triceritots());

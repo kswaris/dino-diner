@@ -1,4 +1,4 @@
-﻿/* WaterTest.cs
+﻿    /* WaterTest.cs
  * Author: Sam Waris
  */
 using System;
@@ -59,6 +59,13 @@ namespace MenuTest.Drinks
             Water w = new Water();
             w.AddLemon();
             Assert.True(w.Lemon);
+        }
+        [Fact]
+        public void ShouldHaveCorrectIngredients()
+        {
+            Water w = new Water();
+            Assert.Contains<string>("Water", w.Ingredients);
+            Assert.Single(w.Ingredients);
         }
     }
 }

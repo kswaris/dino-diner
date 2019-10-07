@@ -14,7 +14,7 @@ namespace MenuTest
         [InlineData(typeof(SteakosaurusBurger))]
         [InlineData(typeof(TRexKingBurger))]
         [InlineData(typeof(VelociWrap))]
-        [InlineData(typeof(Fryceritops))]
+        [InlineData(typeof(Friceritops))]
         [InlineData(typeof(Triceritots))]
         [InlineData(typeof(MeteorMacAndCheese))]
         [InlineData(typeof(MezzorellaSticks))]

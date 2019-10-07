@@ -1,6 +1,6 @@
-﻿/* Fryceritops.cs
+﻿/* Friceritops.cs
  * Author: Sam Waris
- * This is the fryceritops class. It extends the side.
+ * This is the Friceritops class. It extends the side.
  */
 using System;
 using System.Collections.Generic;
@@ -9,9 +9,9 @@ using System.Text;
 namespace DinoDiner.Menu
 {
     /// <summary>
-    /// This is the fryceritops 
+    /// This is the Friceritops 
     /// </summary>
-    public class Fryceritops : Side, IMenuItem
+    public class Friceritops : Side, IMenuItem
     {
         private Size size;
         /// <summary>
@@ -47,7 +47,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// This is the fryceritop constructor.
         /// </summary> 
-        public Fryceritops()
+        public Friceritops()
         {
             base.Calories = 222;
             base.Price = 0.99;
@@ -74,7 +74,7 @@ namespace DinoDiner.Menu
         /// <returns>This is the string</returns>
         public override string ToString()
         {
-            return this.size.ToString() + " Fryceritops";
+            return this.size.ToString() + " Friceritops";
         }
     }
 }

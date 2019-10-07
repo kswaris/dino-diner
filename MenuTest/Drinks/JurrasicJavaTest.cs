@@ -57,12 +57,20 @@ namespace MenuTest.Drinks
             jj.AddIce();
             Assert.True(jj.Ice);
         }
+        [Fact]
         public void LeaveSpaceForCreamCheck()
         {
             JurassicJava jj = new JurassicJava();
             jj.LeaveRoomForCream();
             Assert.True(jj.RoomForCream);
         }
-
+        [Fact]
+        public void DefaultIngredients()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.Contains("Water", jj.Ingredients);
+            Assert.Contains<string>("Coffee", jj.Ingredients);
+            Assert.Equal<int>(2, jj.Ingredients.Count);
+        }
     }
 }
