@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// This is the Friceritops 
     /// </summary>
-    public class Friceritops : Side, IMenuItem
+    public class Fryceritops : Side, IMenuItem
     {
         private Size size;
         /// <summary>
@@ -47,7 +47,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// This is the fryceritop constructor.
         /// </summary> 
-        public Friceritops()
+        public Fryceritops()
         {
             base.Calories = 222;
             base.Price = 0.99;
@@ -74,7 +74,7 @@ namespace DinoDiner.Menu
         /// <returns>This is the string</returns>
         public override string ToString()
         {
-            return this.size.ToString() + " Friceritops";
+            return this.size.ToString() + " Fryceritops";
         }
     }
 }

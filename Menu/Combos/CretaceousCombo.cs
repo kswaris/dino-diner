@@ -19,7 +19,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Gets and sets the side
         /// </summary>
-        public Side Side { get; set; } = new Friceritops();
+        public Side Side { get; set; } = new Fryceritops();
         /// <summary>
         /// Gets and sets the drink
         /// </summary>
