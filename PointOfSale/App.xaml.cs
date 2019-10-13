@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*App.xaml.cs
+ * Author: Nathan Beano
+ */
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;

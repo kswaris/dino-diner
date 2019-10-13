@@ -1,28 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* ComboSelection.cs
+ * Author: Sam Waris
+ */
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PointOfSale
-{
+{ 
     /// <summary>
-    /// Interaction logic for ComboSelection.xaml
+    /// This is the partial class comboselection
     /// </summary>
     public partial class ComboSelection : Page
     {
+        /// <summary>
+        /// This is the default constructor
+        /// </summary>
         public ComboSelection()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// This is the buildcombo method.
+        /// </summary>
+        /// <param name="sender">This is the sender</param>
+        /// <param name="args">This is the argument</param>
+        public void BuildCombo(object sender, RoutedEventArgs args)
+        {       
+            NavigationService.Navigate(new CustomizeCombo());
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿/* MainWindow.xaml.cs
- * Author: nathan Bean
+﻿/* EntreesElection.cs
+ * Author: Sam Waris
  */
 using System;
 using System.Collections.Generic;
@@ -19,14 +19,14 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EntreeSelection.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EntreeSelection : Page
     {
         /// <summary>
-        /// This is the default constructor
+        /// This is the entree selection default constructor
         /// </summary>
-        public MainWindow()
+        public EntreeSelection()
         {
             InitializeComponent();
         }
