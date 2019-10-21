@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the trexkingburger class
     /// </summary>
-    public class TRexKingBurger : Entree, IMenuItem
+    public class TRexKingBurger : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// This is the bun bool
@@ -67,6 +68,33 @@ namespace DinoDiner.Menu
             }
         }
         /// <summary>
+        /// This is the description string override.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the string special override.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (!this.bun) info.Add("Hold Whole Wheat Bun");
+                if (!this.lettuce) info.Add("Hold Lettuce");
+                if (!this.tomato) info.Add("Hold Tomato");
+                if (!this.onion) info.Add("Hold Onion");
+                if (!this.pickle) info.Add("Hold Pickle");
+                if (!this.ketchup) info.Add("Hold Ketchup");
+                if (!this.mustard) info.Add("Hold Mustard");
+                if (!this.mayo) info.Add("Hold Mayo");
+                return info.ToArray();
+            }
+        }
+
+        /// <summary>
         /// This is the constructor.
         /// </summary>
         public TRexKingBurger()
@@ -80,6 +108,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             bun = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// this holds the lettuce.
@@ -87,6 +116,7 @@ namespace DinoDiner.Menu
         public void HoldLettuce()
         {
             lettuce = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This holds the tomato.
@@ -94,6 +124,7 @@ namespace DinoDiner.Menu
         public void HoldTomato()
         {
             tomato = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This holds the onion.
@@ -101,6 +132,7 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             onion = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This holds the pickle.
@@ -108,6 +140,7 @@ namespace DinoDiner.Menu
         public void HoldPickle()
         {
             pickle = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// this holds the ketchup.
@@ -115,6 +148,7 @@ namespace DinoDiner.Menu
         public void HoldKetchup()
         {
             ketchup = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This holds the mustard.
@@ -122,6 +156,7 @@ namespace DinoDiner.Menu
         public void HoldMustard()
         {
             mustard = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This holds the mayo.
@@ -129,6 +164,7 @@ namespace DinoDiner.Menu
         public void HoldMayo()
         {
             mayo = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This is the overridden tostring method.

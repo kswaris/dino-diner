@@ -3,27 +3,60 @@
  * This is The Cretaceous Combo class.
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// A class representing a combo meal
     /// </summary>
-    public class CretaceousCombo : IMenuItem
+    public class CretaceousCombo : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
-        // Backing Variables
+        private Entree entre = new SteakosaurusBurger();
+        private Side sid = new Fryceritops();
+        private Drink drin = new Sodasaurus();
+        /// <summary>
+        /// The propertychanged eventhandler.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
         private Size size;
         /// <summary>
         /// Gets and sets the entree
         /// </summary>
-        public Entree Entree { get; set; }
+        public Entree Entree {
+            get { return entre; }
+            set
+            {
+                entre = value;
+                NotifyOfPropertyChanged("Special");
+                NotifyOfPropertyChanged("Entree");
+            }
+        }
         /// <summary>
         /// Gets and sets the side
         /// </summary>
-        public Side Side { get; set; } = new Fryceritops();
+        public Side Side
+        {
+            get { return sid; }
+            set
+            {
+                sid = value;
+                NotifyOfPropertyChanged("Special");
+                NotifyOfPropertyChanged("Side");
+            }
+        }
         /// <summary>
         /// Gets and sets the drink
         /// </summary>
-        public Drink Drink { get; set; } = new Sodasaurus();
+        public Drink Drink
+        {
+            get { return drin; }
+            set
+            {
+                drin = value;
+                NotifyOfPropertyChanged("Special");
+                NotifyOfPropertyChanged("Drink");
+            }
+        }
         /// <summary>
         /// Gets the price of the combo
         /// </summary>
@@ -86,6 +119,37 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return this.Entree.ToString() + " Combo";
+        }
+        /// <summary>
+        /// This is the description implementation.
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the special getter property.
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                info.AddRange(this.Entree.Special);
+                info.Add(this.Side.Description);
+                info.AddRange(this.Side.Special);
+                info.Add(this.Drink.Description);
+                info.AddRange(this.Drink.Special);
+                return info.ToArray();
+            }
+        }
+        /// <summary>
+        /// This notifys of the property  changed.
+        /// </summary>
+        /// <param name="name"></param>
+        protected void NotifyOfPropertyChanged(string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

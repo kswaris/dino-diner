@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Tyrannotea class
     /// </summary>
-    public class Tyrannotea : Drink, IMenuItem
+    public class Tyrannotea : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// This is the sweet bool.
@@ -48,6 +49,8 @@ namespace DinoDiner.Menu
             {
                 this.sweet = value;
                 Size = this.size;
+                NotifyOfPropertyChanged("Description");
+                NotifyOfPropertyChanged("Sweet");
             }
         }
         /// <summary>
@@ -62,6 +65,8 @@ namespace DinoDiner.Menu
             set
             {
                 this.lemon = value;
+                NotifyOfPropertyChanged("Lemon");
+                NotifyOfPropertyChanged("Special");
             }
         }
         /// <summary>
@@ -93,6 +98,8 @@ namespace DinoDiner.Menu
                 }
                 if (sweet)
                     Calories *= 2;
+                NotifyOfPropertyChanged("Size");
+                NotifyOfPropertyChanged("Description");
             }
         }
         /// <summary>
@@ -130,6 +137,26 @@ namespace DinoDiner.Menu
             if (sweet) sb.Append(" Sweet");
             sb.Append(" Tyrannotea");
             return sb.ToString();
+        }
+        /// <summary>
+        /// This is the overridden description method.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the special information array return.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (!this.Ice) info.Add("Hold Ice");
+                if (this.Lemon) info.Add("Add Lemon");
+                return info.ToArray();
+            }
         }
     }
 }

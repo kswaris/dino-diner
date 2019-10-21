@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the pterodacylwings class
     /// </summary>
-    public class PterodactylWings : Entree, IMenuItem
+    public class PterodactylWings : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// This is the ingredients, it returns the list.
@@ -43,6 +44,20 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return "Pterodactyl Wings";
+        }
+        /// <summary>
+        /// This is the description override.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// Tihis is the string speical getter.
+        /// </summary>
+        public override string[] Special
+        {
+            get { return new string[0]; }
         }
     }
 }

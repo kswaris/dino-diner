@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -45,7 +46,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// This is the sodasaurus class.
     /// </summary>
-    public class Sodasaurus : Drink, IMenuItem
+    public class Sodasaurus : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         private Size size;
         private SodasaurusFlavor flavor;
@@ -60,7 +61,9 @@ namespace DinoDiner.Menu
             }
             set
             {
-                this.flavor = value;    
+                this.flavor = value;
+                NotifyOfPropertyChanged("Description");
+                NotifyOfPropertyChanged("Flavor");
             }
         }
         /// <summary>
@@ -90,6 +93,8 @@ namespace DinoDiner.Menu
                         Calories = 208;
                         break;
                 }
+                NotifyOfPropertyChanged("Size");
+                NotifyOfPropertyChanged("Description");
             }
         }
         /// <summary>
@@ -129,6 +134,25 @@ namespace DinoDiner.Menu
             sb.Append(this.flavor.ToString());
             sb.Append(" Sodasaurus");
             return sb.ToString();
+        }
+        /// <summary>
+        /// This is the overridden description method.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the special information array return.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (!this.Ice) info.Add("Hold Ice");
+                return info.ToArray();
+            }
         }
     }
 }

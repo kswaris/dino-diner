@@ -9,6 +9,11 @@
             A class representing a combo meal
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.CretaceousCombo.PropertyChanged">
+            <summary>
+            The propertychanged eventhandler.
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
             <summary>
             Gets and sets the entree
@@ -56,6 +61,22 @@
             </summary>
             <returns>This is the overridden tostring.</returns>
         </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Description">
+            <summary>
+            This is the description implementation.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Special">
+            <summary>
+            This is the special getter property.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            This notifys of the property  changed.
+            </summary>
+            <param name="name"></param>
+        </member>
         <member name="T:DinoDiner.Menu.Drink">
             <summary>
             Drinks class.
@@ -86,10 +107,31 @@
             This is the ice getter/setter.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Drink.Description">
+            <summary>
+            This is the description getter, abstracted.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drink.Special">
+            <summary>
+            This is the special getter, abstrated.
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Drink.HoldIce">
             <summary>
             THis holds the ice.
             </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.Drink.PropertyChanged">
+            <summary>
+            The event handler handles if any drink properties were changed.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drink.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            An accessor method for doing things.
+            </summary>
+            <param name="name">Tproperty to change.</param>
         </member>
         <member name="T:DinoDiner.Menu.JurassicJava">
             <summary>
@@ -146,6 +188,16 @@
             This is the tostring method.
             </summary>
             <returns>This is the overriden string.</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Description">
+            <summary>
+            This is the overridden description method.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Special">
+            <summary>
+            This is the special information array return.
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.SodasaurusFlavor">
             <summary>
@@ -218,6 +270,16 @@
             </summary>
             <returns>This overrides the tostring.</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Description">
+            <summary>
+            This is the overridden description method.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Special">
+            <summary>
+            This is the special information array return.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Tyrannotea">
             <summary>
             Tyrannotea class
@@ -274,6 +336,16 @@
             </summary>
             <returns>This is the string.</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Description">
+            <summary>
+            This is the overridden description method.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Special">
+            <summary>
+            This is the special information array return.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Water">
             <summary>
             This is the water class.
@@ -309,6 +381,16 @@
             This is the major tostring
             </summary>
             <returns>this is the string you return.</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Description">
+            <summary>
+            This is the overridden description method.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Special">
+            <summary>
+            This is the special information array return.
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Brontowurst">
             <summary>
@@ -361,6 +443,16 @@
             </summary>
             <returns>This is the string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Brontowurst.Description">
+            <summary>
+            This is the description overridden.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Brontowurst.Special">
+            <summary>
+            This is the special override.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.DinoNuggets">
             <summary>
             This is the dinonuggets class.
@@ -392,9 +484,29 @@
             </summary>
             <returns>This is the string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.DinoNuggets.Special">
+            <summary>
+            The big getter setter
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.DinoNuggets.Description">
+            <summary>
+            This is the description string.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entree">
             <summary>
             Entree Class.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Entree.price">
+            <summary>
+            This is the price variable.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Entree.calories">
+            <summary>
+            This is the unit calories.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entree.Calories">
@@ -411,6 +523,27 @@
             <summary>
             This is the ingredients list.
             </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entree.Description">
+            <summary>
+            Description getter
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entree.Special">
+            <summary>
+            This is the string array special
+            </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.Entree.PropertyChanged">
+            <summary>
+            The event handler handles if any drink properties were changed.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entree.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            An accessor method for doing things.
+            </summary>
+            <param name="name">Tproperty to change</param>
         </member>
         <member name="T:DinoDiner.Menu.PrehistoricPBJ">
             <summary>
@@ -453,6 +586,16 @@
             </summary>
             <returns>This is the string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Description">
+            <summary>
+            This is the description override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Special">
+            <summary>
+            This is the override method
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.PterodactylWings">
             <summary>
             This is the pterodacylwings class
@@ -473,6 +616,16 @@
             This is the overridden tostring method.
             </summary>
             <returns>This is the string</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.PterodactylWings.Description">
+            <summary>
+            This is the description override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.PterodactylWings.Special">
+            <summary>
+            Tihis is the string speical getter.
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.SteakosaurusBurger">
             <summary>
@@ -540,6 +693,16 @@
             </summary>
             <returns>This is the string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Description">
+            <summary>
+            This is the description override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Special">
+            <summary>
+            This is the special override.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.TRexKingBurger">
             <summary>
             This is the trexkingburger class
@@ -588,6 +751,16 @@
         <member name="P:DinoDiner.Menu.TRexKingBurger.Ingredients">
             <summary>
             This is the ingredients list.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Description">
+            <summary>
+            This is the description string override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Special">
+            <summary>
+            This is the string special override.
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.TRexKingBurger.#ctor">
@@ -671,6 +844,16 @@
             This is the ingredients list.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.VelociWrap.Description">
+            <summary>
+            This is the description override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.VelociWrap.Special">
+            <summary>
+            This is the special override.
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.VelociWrap.HoldLettuce">
             <summary>
             This holds the lettuce.
@@ -710,6 +893,26 @@
         <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
             <summary>
             Ingredients Getter
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.IOrderItem">
+            <summary>
+            This is the iorderitem interface.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Price">
+            <summary>
+            This is the price double getter property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Description">
+            <summary>
+            This is the description getter property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Special">
+            <summary>
+            This is the special string array getter property.
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Menu">
@@ -774,6 +977,16 @@
             </summary>
             <returns>This is the string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Fryceritops.Description">
+            <summary>
+            This is the description override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Fryceritops.Special">
+            <summary>
+            This is the special override.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.MeteorMacAndCheese">
             <summary>
             
@@ -799,6 +1012,16 @@
             This is the overridden tostring method.
             </summary>
             <returns>This is the string</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Description">
+            <summary>
+            This is the description override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Special">
+            <summary>
+            This is the special override.
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.MezzorellaSticks">
             <summary>
@@ -826,6 +1049,16 @@
             </summary>
             <returns>This is the string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Description">
+            <summary>
+            This is the description override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Special">
+            <summary>
+            This is the special override.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Side">
             <summary>
             Side class
@@ -850,6 +1083,27 @@
             <summary>
             Gets or sets the size
             </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Side.Description">
+            <summary>
+            This is the description, abstracted.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Side.Special">
+            <summary>
+            This is the special, abstracted.
+            </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.Side.PropertyChanged">
+            <summary>
+            The event handler handles if any drink properties were changed.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Side.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            An accessor method for doing things.
+            </summary>
+            <param name="name">Tproperty to change</param>
         </member>
         <member name="T:DinoDiner.Menu.Triceritots">
             <summary>
@@ -876,6 +1130,16 @@
             This is the overridden tostring method.
             </summary>
             <returns>This is the string</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.Triceritots.Description">
+            <summary>
+            This is the description override.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Triceritots.Special">
+            <summary>
+            This is the special override.
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Size">
             <summary>

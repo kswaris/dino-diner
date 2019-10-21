@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the dinonuggets class.
     /// </summary>
-    public class DinoNuggets : Entree, IMenuItem
+    public class DinoNuggets : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// This is the nugget uint, it holds nugget count.
@@ -48,6 +49,9 @@ namespace DinoDiner.Menu
             Nuggets++;
             Calories += 59;
             Price += .25;
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Calories");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This is the overridden tostring method.
@@ -57,5 +61,28 @@ namespace DinoDiner.Menu
         {
             return "Dino-Nuggets";
         }
+        /// <summary>
+        /// The big getter setter
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if(Nuggets > 6)
+                {
+                    special.Add($"{Nuggets - 6} Extra Nuggets");
+                }
+                return special.ToArray();
+            }
+        }
+        /// <summary>
+        /// This is the description string.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        
     }
 }

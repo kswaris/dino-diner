@@ -19,7 +19,6 @@ namespace MenuTest.Entrees
             TRexKingBurger trex = new TRexKingBurger();
             Assert.Equal<uint>(728, trex.Calories);
         }
-
         [Fact]
         public void ShouldListDefaultIngredients()
         {
@@ -106,7 +105,35 @@ namespace MenuTest.Entrees
             trex.HoldMayo();
             Assert.DoesNotContain<string>("Mayo", trex.Ingredients);
         }
+        [Fact]
+        public void TRexKingBurgerDescriptionTest()
+        {
+            TRexKingBurger t = new TRexKingBurger();
+            Assert.Equal("T-Rex King Burger", t.Description);
+        }
 
+        [Fact]
+        public void TRexKingBurgerSpecialsTest()
+        {
+            TRexKingBurger t = new TRexKingBurger();
+            Assert.Empty(t.Special);
+            t.HoldBun();
+            Assert.Contains("Hold Whole Wheat Bun", t.Special);
+            t.HoldPickle();
+            Assert.Contains("Hold Pickle", t.Special);
+            t.HoldKetchup();
+            Assert.Contains("Hold Ketchup", t.Special);
+            t.HoldMustard();
+            Assert.Contains("Hold Mustard", t.Special);
+            t.HoldTomato();
+            Assert.Contains("Hold Tomato", t.Special);
+            t.HoldOnion();
+            Assert.Contains("Hold Onion", t.Special);
+            t.HoldMayo();
+            Assert.Contains("Hold Mayo", t.Special);
+            t.HoldLettuce();
+            Assert.Contains("Hold Lettuce", t.Special);
+        }
     }
 
 }

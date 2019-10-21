@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the jurrassicJava Class
     /// </summary>
-    public class JurassicJava : Drink, IMenuItem
+    public class JurassicJava : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// This is the basic no argument constructor.
@@ -43,6 +44,8 @@ namespace DinoDiner.Menu
             set
             {
                 this.roomForCream = value;
+                NotifyOfPropertyChanged("RoomForCream");
+                NotifyOfPropertyChanged("Special");
             }
         }
         private bool decaf;
@@ -58,6 +61,8 @@ namespace DinoDiner.Menu
             set
             {
                 this.decaf = value;
+                NotifyOfPropertyChanged("Decaf");
+                NotifyOfPropertyChanged("Description");
             }
         }
         /// <summary>
@@ -101,6 +106,8 @@ namespace DinoDiner.Menu
                         Calories = 8;
                         break;
                 }
+                NotifyOfPropertyChanged("Size");
+                NotifyOfPropertyChanged("Description");
             }
         }
         /// <summary>
@@ -129,6 +136,26 @@ namespace DinoDiner.Menu
             if (decaf) sb.Append(" Decaf");
             sb.Append(" Jurassic Java");
             return sb.ToString();
+        }
+        /// <summary>
+        /// This is the overridden description method.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the special information array return.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (this.Ice) info.Add("Add Ice");
+                if (this.roomForCream) info.Add("Leave Room For Cream");
+                return info.ToArray();
+            }
         }
     }
 }

@@ -67,5 +67,25 @@ namespace MenuTest.Drinks
             Assert.Contains<string>("Water", w.Ingredients);
             Assert.Single(w.Ingredients);
         }
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void WaterDescriptionTest(Size s)
+        {
+            Water w = new Water();
+            w.Size = s;
+            Assert.Equal(s + " Water", w.Description);
+        }
+        [Fact]
+        public void WaterSpecialsTest()
+        {
+            Water w = new Water();
+            Assert.Empty(w.Special);
+            w.AddLemon();
+            Assert.Contains("Add Lemon", w.Special);
+            w.HoldIce();
+            Assert.Contains("Hold Ice", w.Special);
+        }
     }
 }

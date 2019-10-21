@@ -11,15 +11,12 @@ namespace MenuTest.Entrees
             DinoNuggets dn = new DinoNuggets();
             Assert.Equal(4.25, dn.Price, 2);
         }
-
         [Fact]
         public void ShouldHaveCorrectDefaultCalories()
         {
             DinoNuggets dn = new DinoNuggets();
             Assert.Equal<uint>(59*6, dn.Calories);
         }
-
-
         [Fact]
         public void ShouldListDefaultIngredients()
         {
@@ -34,7 +31,6 @@ namespace MenuTest.Entrees
             Assert.Equal(6, nuggetCount);
             Assert.Equal<int>(6, ingredients.Count);
         }
-
         [Fact]
         public void AddingNuggetsShouldAddIngredients()
         {
@@ -60,7 +56,6 @@ namespace MenuTest.Entrees
             Assert.Equal<int>(8, dn.Ingredients.Count);
 
         }
-
         [Fact]
         public void AddingNuggetsShouldIncreasePrice()
         {
@@ -72,7 +67,6 @@ namespace MenuTest.Entrees
             dn.AddNugget();
             Assert.Equal(dn.Price, 5.0, 2);
         }
-
         [Fact]
         public void AddingNuggetsShouldIncreaseCalories()
         {
@@ -84,5 +78,32 @@ namespace MenuTest.Entrees
             dn.AddNugget();
             Assert.Equal<uint>(dn.Calories, 59*9);
         }
+        [Fact]
+        public void ShouldHaveEmptySpecialByDefault()
+        {
+            DinoNuggets dn = new DinoNuggets();
+            Assert.Empty(dn.Special);
+        }
+        [Fact]
+        public void DinoNuggetDescriptionTest()
+        {
+
+            DinoNuggets n = new DinoNuggets();
+            Assert.Equal("Dino-Nuggets", n.Description);
+        }
+        [Fact]
+        public void DinoNuggetSpecialsTest()
+        {
+            DinoNuggets dn = new DinoNuggets();
+            Assert.Empty(dn.Special);
+
+            for (int extraNug = 1; extraNug < 10; extraNug++)
+            {
+                dn.AddNugget();
+                Assert.Contains(extraNug + " Extra Nuggets", dn.Special);
+            }
+        }
+
+
     }
 }

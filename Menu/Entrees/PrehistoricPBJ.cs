@@ -9,7 +9,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// This is the prehistoricpbj class
     /// </summary>
-    public class PrehistoricPBJ : Entree, IMenuItem
+    public class PrehistoricPBJ : Entree, IMenuItem, IOrderItem
     {
         /// <summary>
         /// This is the peanut butter bool
@@ -46,6 +46,7 @@ namespace DinoDiner.Menu
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This holds jel
@@ -53,6 +54,7 @@ namespace DinoDiner.Menu
         public void HoldJelly()
         {
             this.jelly = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This is the overridden tostring method.
@@ -61,6 +63,26 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return "Prehistoric PB&J";
+        }
+        /// <summary>
+        /// This is the description override.
+        /// </summary>
+        public override string Description
+        {
+            get{ return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the override method
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!peanutButter) special.Add("Hold Peanut Butter");
+                if (!jelly) special.Add("Hold Jelly");
+                return special.ToArray();
+            }
         }
     }
 }

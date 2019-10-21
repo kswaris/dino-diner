@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// This is the water class.
     /// </summary>
-    public class Water : Drink, IMenuItem
+    public class Water : Drink, IMenuItem, IOrderItem
     {
         /// <summary>
         /// This is the no argument constructor.
@@ -72,6 +72,26 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return this.size.ToString() + " Water";
+        }
+        /// <summary>
+        /// This is the overridden description method.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the special information array return.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (!this.Ice) info.Add("Hold Ice");
+                if (this.Lemon) info.Add("Add Lemon");
+                return info.ToArray();
+            }
         }
     }
 }

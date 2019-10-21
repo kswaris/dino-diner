@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Velociwrap Class
     /// </summary>
-    public class VelociWrap : Entree, IMenuItem
+    public class VelociWrap : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// This is the dressing bool.
@@ -50,11 +51,33 @@ namespace DinoDiner.Menu
             }
         }
         /// <summary>
+        /// This is the description override.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the special override.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (!this.dressing) info.Add("Hold Dressing");
+                if (!this.lettuce) info.Add("Hold Lettuce");
+                if (!this.cheese) info.Add("Hold Cheese");
+                return info.ToArray();
+            }
+        }
+        /// <summary>
         /// This holds the lettuce.
         /// </summary>
         public void HoldLettuce()
         {
             lettuce = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This holds the dressing.
@@ -62,6 +85,7 @@ namespace DinoDiner.Menu
         public void HoldDressing()
         {
             dressing = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This holds the cheese.
@@ -69,6 +93,7 @@ namespace DinoDiner.Menu
         public void HoldCheese()
         {
             cheese = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This is the overridden tostring method.

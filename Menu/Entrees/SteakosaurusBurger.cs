@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the steakosaurus burger class
     /// </summary>
-    public class SteakosaurusBurger : Entree, IMenuItem
+    public class SteakosaurusBurger : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// This is the bun bool.
@@ -63,6 +64,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             bun = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This allows you to hold the pickle.
@@ -70,6 +72,7 @@ namespace DinoDiner.Menu
         public void HoldPickle()
         {
             pickle = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This allows you to hold the ketchup
@@ -77,6 +80,7 @@ namespace DinoDiner.Menu
         public void HoldKetchup()
         {
             ketchup = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This allows you to hold the mustard.
@@ -84,6 +88,7 @@ namespace DinoDiner.Menu
         public void HoldMustard()
         {
             mustard = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This is the overridden tostring method.
@@ -92,6 +97,28 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return "Steakosaurus Burger";
+        }
+        /// <summary>
+        /// This is the description override.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the special override.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (!this.bun) info.Add("Hold Bun"); 
+                if (!this.pickle) info.Add("Hold Pickle"); 
+                if (!this.ketchup) info.Add("Hold Ketchup"); 
+                if (!this.mustard) info.Add("Hold Mustard"); 
+                return info.ToArray();
+            }
         }
     }
 }

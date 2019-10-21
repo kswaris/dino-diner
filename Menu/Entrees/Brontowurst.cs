@@ -3,12 +3,13 @@
  * This is the brontowurst class. It houses things about a brontowurst.
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// This is the brontowurst class.
     /// </summary>
-    public class Brontowurst : Entree, IMenuItem
+    public class Brontowurst : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// This is the private variable, bun. It is whether or not you hold the bun.
@@ -50,6 +51,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             this.bun = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This is the holdpeppers method. It holds the peppers.
@@ -57,6 +59,7 @@ namespace DinoDiner.Menu
         public void HoldPeppers()
         {
             this.peppers = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This is the holdonions method. It holds the onions.
@@ -64,6 +67,7 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             this.onion = false;
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// This is the overridden tostring method.
@@ -72,6 +76,27 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return "Brontowurst";
+        }
+        /// <summary>
+        /// This is the description overridden.
+        /// </summary>
+        public override string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// This is the special override.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (!this.bun) info.Add("Hold Bun");
+                if (!this.peppers) info.Add("Hold Peppers");
+                if (!this.onion) info.Add("Hold Onions");
+                return info.ToArray();
+            }
         }
     }
 }
