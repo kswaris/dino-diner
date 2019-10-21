@@ -69,7 +69,6 @@ namespace DinoDiner.Menu
                     "Salt",
                     "Vegetable Oil"
                 };
-                ;
                 return ingredients;
             }
         }

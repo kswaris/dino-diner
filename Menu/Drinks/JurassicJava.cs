@@ -142,7 +142,10 @@ namespace DinoDiner.Menu
         /// </summary>
         public override string Description
         {
-            get { return this.ToString(); }
+            get
+            {
+                return this.ToString();
+            }
         }
         /// <summary>
         /// This is the special information array return.

@@ -68,7 +68,6 @@ namespace DinoDiner.Menu
                     "Cheese Product",
                     "Pork Sausage"
                 };
-                ;
                 return ingredients;
             }
         }

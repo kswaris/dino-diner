@@ -27,9 +27,7 @@ namespace DinoDiner.Menu
             {
                 List<string> ingredients = new List<string>();
                 for(int x = 0; x < Nuggets; x++)
-                {
                     ingredients.Add("Chicken Nugget");
-                }
                 return ingredients;
             }
         }
@@ -83,6 +81,5 @@ namespace DinoDiner.Menu
         {
             get { return this.ToString(); }
         }
-        
     }
 }

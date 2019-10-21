@@ -14,15 +14,48 @@ namespace DinoDiner.Menu
     /// </summary>
     public abstract class Drink : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// This is the price double.
+        /// </summary>
+        private double price;
+        /// <summary>
+        /// This is the uint calories
+        /// </summary>
+        private uint calories;
+        /// <summary>
+        /// This is the ice bool.
+        /// </summary>
         private bool _ice = true;
         /// <summary>
         /// This is the price double, it holds the price.
         /// </summary>
-        public double Price { get; set; }
+        public double Price
+        {
+            get
+            {
+                return price;
+            }
+            set
+            {
+                price = value;
+                NotifyOfPropertyChanged("Price");
+            }
+        }
         /// <summary>
         /// This is the calories uint, it has properties.
         /// </summary>
-        public uint Calories { get; set; }
+        public uint Calories
+        {
+            get
+            {
+                return calories;
+            }
+            set
+            {
+                calories = value;
+                NotifyOfPropertyChanged("Calories");
+            }
+        }
         /// <summary>
         /// This is the ingreidents list. It has a getter.
         /// </summary>
@@ -36,7 +69,10 @@ namespace DinoDiner.Menu
         /// </summary>
         public bool Ice
         {
-            get { return _ice; }
+            get
+            {
+                return _ice;
+            }
             set
             {
                 _ice = value;

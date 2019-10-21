@@ -48,7 +48,13 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Sodasaurus : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Private Size, size.
+        /// </summary>
         private Size size;
+        /// <summary>
+        /// Flavor for sodasaurus.
+        /// </summary>
         private SodasaurusFlavor flavor;
         /// <summary>
         /// This is the flavor property.
@@ -140,7 +146,10 @@ namespace DinoDiner.Menu
         /// </summary>
         public override string Description
         {
-            get { return this.ToString(); }
+            get
+            {
+                return this.ToString();
+            }
         }
         /// <summary>
         /// This is the special information array return.

@@ -9,9 +9,29 @@
             A class representing a combo meal
             </summary>
         </member>
+        <member name="F:DinoDiner.Menu.CretaceousCombo.entre">
+            <summary>
+            Entree entre steakosaurus by default
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.CretaceousCombo.sid">
+            <summary>
+            Fryceritops side default.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.CretaceousCombo.drin">
+            <summary>
+            Drink default set to sodasaurus
+            </summary>
+        </member>
         <member name="E:DinoDiner.Menu.CretaceousCombo.PropertyChanged">
             <summary>
             The propertychanged eventhandler.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.CretaceousCombo.size">
+            <summary>
+            Size Property.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
@@ -80,6 +100,21 @@
         <member name="T:DinoDiner.Menu.Drink">
             <summary>
             Drinks class.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drink.price">
+            <summary>
+            This is the price double.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drink.calories">
+            <summary>
+            This is the uint calories
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drink._ice">
+            <summary>
+            This is the ice bool.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Drink.Price">
@@ -244,6 +279,16 @@
             This is the sodasaurus class.
             </summary>
         </member>
+        <member name="F:DinoDiner.Menu.Sodasaurus.size">
+            <summary>
+            Private Size, size.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sodasaurus.flavor">
+            <summary>
+            Flavor for sodasaurus.
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Sodasaurus.Flavor">
             <summary>
             This is the flavor property.
@@ -354,6 +399,16 @@
         <member name="M:DinoDiner.Menu.Water.#ctor">
             <summary>
             This is the no argument constructor.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Water.lemon">
+            <summary>
+            Lemon Bool.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Water.size">
+            <summary>
+            Size Size.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Water.Lemon">
@@ -950,6 +1005,41 @@
             This is the tostring override.
             </summary>
             <returns>This string contains information.</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Order">
+            <summary>
+            /This is the order class.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SalesTaxRate">
+            <summary>
+            This is the salestax rate Property.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SalesTaxCost">
+            <summary>
+            This is the salestaxcost property.  
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.TotalCost">
+            <summary>
+            This is the total cost property.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.#ctor">
+            <summary>
+            This is the order constructor.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.Items">
+            <summary>
+            This is the observablecollection, items.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SubtotalCost">
+            <summary>
+            This is the subtotalcost property.
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>

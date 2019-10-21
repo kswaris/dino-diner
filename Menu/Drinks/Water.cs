@@ -22,27 +22,46 @@ namespace DinoDiner.Menu
             Lemon = false;
 
         }
+        /// <summary>
+        /// Lemon Bool.
+        /// </summary>
         private bool lemon;
+        /// <summary>
+        /// Size Size.
+        /// </summary>
         private Size size;
         /// <summary>
         /// This is the lemon property.
         /// </summary>
         public bool Lemon
         {
-            get { return this.lemon; }
-            set { this.lemon = value; }
+            get
+            {
+                return this.lemon;
+            }
+            set
+            {
+                this.lemon = value;
+                NotifyOfPropertyChanged("Lemon");
+                NotifyOfPropertyChanged("Special");
+            }
         }
         /// <summary>
         /// This is the size property.
         /// </summary>
         public override Size Size
         {
-            get { return size; }
+            get
+            {
+                return size;
+            }
             set
             {
                 this.size = value;
                 this.Price = 0.10;
                 this.Calories = 00;
+                NotifyOfPropertyChanged("Description");
+                NotifyOfPropertyChanged("Size");
             }
         }
         /// <summary>

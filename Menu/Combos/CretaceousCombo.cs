@@ -11,19 +11,34 @@ namespace DinoDiner.Menu
     /// </summary>
     public class CretaceousCombo : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Entree entre steakosaurus by default
+        /// </summary>
         private Entree entre = new SteakosaurusBurger();
+        /// <summary>
+        /// Fryceritops side default.
+        /// </summary>
         private Side sid = new Fryceritops();
+        /// <summary>
+        /// Drink default set to sodasaurus
+        /// </summary>
         private Drink drin = new Sodasaurus();
         /// <summary>
         /// The propertychanged eventhandler.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Size Property.
+        /// </summary>
         private Size size;
         /// <summary>
         /// Gets and sets the entree
         /// </summary>
         public Entree Entree {
-            get { return entre; }
+            get
+            {
+                return entre;
+            }
             set
             {
                 entre = value;
@@ -36,7 +51,10 @@ namespace DinoDiner.Menu
         /// </summary>
         public Side Side
         {
-            get { return sid; }
+            get
+            {
+                return sid;
+            }
             set
             {
                 sid = value;
@@ -49,7 +67,10 @@ namespace DinoDiner.Menu
         /// </summary>
         public Drink Drink
         {
-            get { return drin; }
+            get
+            {
+                return drin;
+            }
             set
             {
                 drin = value;
@@ -82,7 +103,10 @@ namespace DinoDiner.Menu
         /// </summary>
         public Size Size
         {
-            get { return size; }
+            get
+            {
+                return size;
+            }
             set
             {
                 size = value;
