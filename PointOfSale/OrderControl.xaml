@@ -19,11 +19,18 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Order" TextAlignment="Right" FontWeight="Bold"/>
         <TextBlock Text="#Numberio" Grid.Column="1" FontWeight="Bold" Margin="5,0,0,0"/>
-        <ListBox Grid.Row="1" Grid.ColumnSpan="2">
-            
+        <ListBox Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Items}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Description}"/>
+                        <ListBox IsSynchronizedWithCurrentItem="True" BorderBrush="White" ItemsSource="{Binding Path=Special}"></ListBox>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <TextBlock Text="$" TextAlignment="Right" Grid.Row="2" FontWeight="Bold"/>
-        <TextBlock Text="{Binding Path=SubtotalCost}" Grid.Row="2" Grid.Column="2" FontWeight="Bold"/>
+        <TextBlock Text="{Binding Path=SubtotalCost,StringFormat=n2}" Grid.Row="2" Grid.Column="2" FontWeight="Bold"/>
         <Button Grid.Row="3">Cancel</Button>
         <Button Grid.Row="3" Grid.Column="1">Pay</Button>
     </Grid>

@@ -20,6 +20,9 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        /// Ordercontrol
+        /// </summary>
         public OrderControl()
         {
             InitializeComponent();
