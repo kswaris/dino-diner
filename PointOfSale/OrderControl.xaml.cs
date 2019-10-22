@@ -1,7 +1,4 @@
-﻿/* MainWindow.xaml.cs
- * Author: nathan Bean
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,23 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DinoDiner.Menu;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for OrderControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OrderControl : UserControl
     {
-        /// <summary>
-        /// This is the default constructor
-        /// </summary>
-        public MainWindow()
+        public OrderControl()
         {
             InitializeComponent();
-            Order order = new Order();
-            DataContext = order;
         }
     }
 }
