@@ -13,6 +13,6 @@
         <DockPanel>
         <local:OrderControl x:Name="OrderControl" DockPanel.Dock="Right" Width="200">
         </local:OrderControl>
-        <Frame Name="OrderUI" Source="SideSelection.xaml" LoadCompleted="OnLoadCompleted" DataContextChanged="OnDataContextChanged"></Frame>
+        <Frame Name="OrderUI" Source="MainWindow.xaml" LoadCompleted="OnLoadCompleted" DataContextChanged="OnDataContextChanged"></Frame>
     </DockPanel>
 </Window>

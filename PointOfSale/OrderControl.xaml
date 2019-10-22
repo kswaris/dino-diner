@@ -19,12 +19,12 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Order" TextAlignment="Right" FontWeight="Bold"/>
         <TextBlock Text="#Numberio" Grid.Column="1" FontWeight="Bold" Margin="5,0,0,0"/>
-        <ListBox Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Items}" >
+        <ListBox IsSynchronizedWithCurrentItem="True" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Items}" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding Path=Description}"/>
-                        <ListBox IsSynchronizedWithCurrentItem="True" BorderBrush="White" ItemsSource="{Binding Path=Special}"></ListBox>
+                        <ListBox BorderBrush="White" ItemsSource="{Binding Path=Special}"></ListBox>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
