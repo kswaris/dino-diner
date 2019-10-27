@@ -24,27 +24,25 @@
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" FontSize="20">Add To Order</TextBlock>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" FontSize="20">Flavour</TextBlock>
         <Border Margin="5" Grid.Column="0" Grid.Row="2">
-            <Button FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Cherry</Button>
+            <Button Click="CherryClick" FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Cherry</Button>
         </Border>
         <Border Margin="5" Grid.Column="0" Grid.Row="3">
-            <Button FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Lime</Button>
+            <Button Click="LimeClick" FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Lime</Button>
         </Border>
         <Border Margin="5" Grid.Column="0" Grid.Row="4">
-            <Button FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Vanilla</Button>
+            <Button Click="VanillaClick" FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Vanilla</Button>
         </Border>
-
         <Border Margin="5" Grid.Column="1" Grid.Row="2">
-            <Button FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Chocolate</Button>
+            <Button Click="ChocolateClick" FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Chocolate</Button>
         </Border>
         <Border Margin="5" Grid.Column="1" Grid.Row="3">
-            <Button FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Orange</Button>
+            <Button Click="OrangeClick" FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Orange</Button>
         </Border>
-
         <Border Margin="5" Grid.Column="2" Grid.Row="2">
-            <Button FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Cola</Button>
+            <Button Click="ColaClick" FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Cola</Button>
         </Border>
         <Border Margin="5" Grid.Column="2" Grid.Row="3">
-            <Button FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Root Beer</Button>
+            <Button Click="RootBeerClick" FontSize ="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Root Beer</Button>
         </Border>
     </Grid>
 </Page>

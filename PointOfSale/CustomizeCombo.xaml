@@ -30,17 +30,17 @@
         </WrapPanel>
         <WrapPanel Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50">
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Margin="10">
-                <RadioButton Name="Small" GroupName="button" Grid.Row="2" Height="75" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <RadioButton Click="ComboMakeSmall" Name="Small" GroupName="button" Grid.Row="2" Height="75" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">Small</TextBlock>
                 </RadioButton>
             </Border>
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Margin="10">
-                <RadioButton Name="Medium" GroupName="button" Grid.Row="2" Height="75" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <RadioButton Click="ComboMakeMedium" Name="Medium" GroupName="button" Grid.Row="2" Height="75" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">Medium</TextBlock>
                 </RadioButton>
             </Border>
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Margin="10">
-                <RadioButton Name="Large" GroupName="button" Grid.Row="2" Height="75" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <RadioButton Click="ComboMakeLarge" Name="Large" GroupName="button" Grid.Row="2" Height="75" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">Large</TextBlock>
                 </RadioButton>
             </Border>

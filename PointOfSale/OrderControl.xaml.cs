@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* OrderControl.xaml.cs
+ * Author: Sam Waris
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -26,6 +30,28 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// This is the delete from list method.
+        /// </summary>
+        /// <param name="sender">This is the sender.</param>
+        /// <param name="args">This is the argument args.</param>
+        public void DeleteFromList(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+                if (sender is FrameworkElement element)
+                    if (element.DataContext is IOrderItem item)
+                        order.Items.Remove(item);
+        }
+        /// <summary>
+        /// This is the emptylist Method.
+        /// </summary>
+        /// <param name="sender">This is the object sender.</param>
+        /// <param name="args"> This is the object argument.</param>
+        public void EmptyList(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+                order.Items.Clear();
         }
     }
 }

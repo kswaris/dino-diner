@@ -24,12 +24,12 @@
         <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Add to Order</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-115,0,0">Side</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-115,0,0">Size</TextBlock>
-        <Button Grid.Row="1" Margin="5">Friceritops</Button>
-        <Button Grid.Row="2" Margin="5">Meteor Mac &amp; Cheese</Button>
-        <Button Grid.Row="3" Margin="5">Mezzorella Sticks</Button>
-        <Button Grid.Row="4" Margin="5">Triceritots</Button>
-        <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="1" Grid.Column="2"><RadioButton GroupName="size"  Margin="5">Small</RadioButton></Border>
-        <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="2" Grid.Column="2"><RadioButton GroupName="size"  Margin="5">Medium</RadioButton></Border>
-        <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="3" Grid.Column="2"><RadioButton GroupName="size"  Margin="5">Large</RadioButton></Border>
+        <Button Click="FryceritopsClick" Grid.Row="1" Margin="5">Fryceritops</Button>
+        <Button Click="MeteorMacAndCheeseClick" Grid.Row="2" Margin="5">Meteor Mac &amp; Cheese</Button>
+        <Button Click="MezzorellaSticksClick" Grid.Row="3" Margin="5">Mezzorella Sticks</Button>
+        <Button Click="Triceritots" Grid.Row="4" Margin="5">Triceritots</Button>
+        <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="1" Grid.Column="2"><RadioButton Click="SideMakeSmall" GroupName="size"  Margin="5">Small</RadioButton></Border>
+        <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="2" Grid.Column="2"><RadioButton Click="SideMakeMedium" GroupName="size"  Margin="5">Medium</RadioButton></Border>
+        <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="3" Grid.Column="2"><RadioButton Click="SideMakeLarge" GroupName="size"  Margin="5">Large</RadioButton></Border>
     </Grid>
 </Page>

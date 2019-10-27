@@ -27,27 +27,29 @@
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2">Specials</TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="0" FontSize="20">Add to Order</TextBlock>
         <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="2">
-            <RadioButton Click="SodasaurusSetup" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="drink">Sodasaurus</RadioButton>
+            <Button Click="SodasaurusSetup" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Sodasaurus</Button>
         </Border>
         <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="3">
-            <RadioButton Click="TyrannoteaSetup" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="drink">Tyrannotea</RadioButton>
+            <Button Click="TyrannoteaSetup" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Tyrannotea</Button>
         </Border>
         <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="4">
-            <RadioButton Click="JurassicJavaSetup" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="drink">Jurrasic Java</RadioButton>
+            <Button Click="JurassicJavaSetup" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Jurrasic Java</Button>
         </Border>
         <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Row="5">
-            <RadioButton Click="WaterSetup" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="drink">Water</RadioButton>
+            <Button Click="WaterSetup" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Water</Button>
         </Border>
         <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Column="1" Grid.Row="2">
-            <RadioButton VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="size">Small</RadioButton>
+            <RadioButton Click="DrinkMakeSmall" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="size">Small</RadioButton>
         </Border>
         <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Column="1" Grid.Row="3">
-            <RadioButton VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="size">Medium</RadioButton>
+            <RadioButton Click="DrinkMakeMedium" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="size">Medium</RadioButton>
         </Border>
         <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Column="1" Grid.Row="4">
-            <RadioButton VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="size">Large</RadioButton>
+            <RadioButton Click="DrinkMakeLarge" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="size">Large</RadioButton>
         </Border>
-
+        <Border Margin="5" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Grid.Column="1" Grid.Row="5">
+            <Button Click="ReturnToMenu" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Done</Button>
+        </Border>
         <StackPanel Name="FillPanel2" Grid.Column="2" Grid.Row="2"></StackPanel>
         <StackPanel Name="FillPanel3" Grid.Column="2" Grid.Row="3"></StackPanel>
         <StackPanel Name="FillPanel4" Grid.Column="2" Grid.Row="4"></StackPanel>

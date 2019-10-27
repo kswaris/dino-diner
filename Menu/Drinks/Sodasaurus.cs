@@ -63,7 +63,7 @@ namespace DinoDiner.Menu
         {
             get
             {
-                return this.flavor;
+                return flavor;
             }
             set
             {

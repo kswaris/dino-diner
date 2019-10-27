@@ -5,14 +5,28 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
 
-namespace DinoDiner.Menu
+namespace DinoDiner.Menu 
 {
     /// <summary>
     /// /This is the order class.
     /// </summary>
-    public class Order
+    public class Order: INotifyPropertyChanged
     {
+        /// <summary>
+        /// /This is the propertychangedEventHandler
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// This is the notify property change.
+        /// </summary>
+        /// <param name="PropertyName">This is the propertyname string.</param>
+        protected void NotifyOfPropertyChanged(string PropertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
+        }
         /// <summary>
         /// This is the salestax rate Property.
         /// </summary>
@@ -37,7 +51,8 @@ namespace DinoDiner.Menu
         public Order()
         {
             Items = new ObservableCollection<IOrderItem>();
-            SalesTaxRate = 0.25; //15% sales tax
+            SalesTaxRate = 0.25; //25% sales tax
+            this.Items.CollectionChanged += this.OnCollectionChanged;
         }
         /// <summary>
         /// This is the observablecollection, items.
@@ -55,6 +70,17 @@ namespace DinoDiner.Menu
                     total += i.Price;
                 return Math.Max(total, 0);
             }
+        }
+        /// <summary>
+        /// This is the oncollectionchanged notifyer.
+        /// </summary>
+        /// <param name="sender"> This is the sender object.</param>
+        /// <param name="e"> This is the notifycollectionchangedargs object.</param>
+        public void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            NotifyOfPropertyChanged("SubtotalCost");
+            NotifyOfPropertyChanged("SalesTaxCost");
+            NotifyOfPropertyChanged("TotalCost");
         }
     }
 }

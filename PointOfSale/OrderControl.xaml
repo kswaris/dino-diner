@@ -15,23 +15,39 @@
             <RowDefinition Height="20"/>
             <RowDefinition/>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Order" TextAlignment="Right" FontWeight="Bold"/>
-        <TextBlock Text="#Numberio" Grid.Column="1" FontWeight="Bold" Margin="5,0,0,0"/>
-        <ListBox IsSynchronizedWithCurrentItem="True" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Items}" >
+        <TextBlock Text="#" Grid.Column="1" FontWeight="Bold" Margin="5,0,0,0"/>
+        <ListBox BorderBrush="White" Name="OrderItems" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Items}" IsSynchronizedWithCurrentItem="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Path=Description}"/>
-                        <ListBox BorderBrush="White" ItemsSource="{Binding Path=Special}"></ListBox>
+                    <StackPanel Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button Name="Delete" Click="DeleteFromList" Width ="20" Content="X" HorizontalAlignment="Left" Grid.Column="0"/>
+                            <TextBlock Text="{Binding Path=Description}" HorizontalAlignment="Left" Grid.Column="1"/>
+                        </Grid>
+                        <ListBox BorderBrush="White" ItemsSource="{Binding Path=Special}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBlock Text="$" TextAlignment="Right" Grid.Row="2" FontWeight="Bold"/>
-        <TextBlock Text="{Binding Path=SubtotalCost,StringFormat=n2}" Grid.Row="2" Grid.Column="2" FontWeight="Bold"/>
-        <Button Grid.Row="3">Cancel</Button>
-        <Button Grid.Row="3" Grid.Column="1">Pay</Button>
+        <TextBlock/>
+        <TextBlock TextAlignment="Right" Text="Subtotal: $" Grid.Row="2" Grid.Column="0"/>
+        <TextBlock Text="{Binding Path=SubtotalCost,StringFormat=n2}" Grid.Row="2" Grid.Column="1"/>
+        <TextBlock TextAlignment="Right" Text="Sales Tax: $" Grid.Row="3" Grid.Column="0"/>
+        <TextBlock Text="{Binding Path=SalesTaxCost, StringFormat=n2}" Grid.Row="3" Grid.Column="1"/>
+        <TextBlock TextAlignment="Right" Text="TOTAL: $" Grid.Row="4" Grid.Column="0"/>
+        <TextBlock Text="{Binding Path=TotalCost, StringFormat=n2}" Grid.Row="4" Grid.Column="1"/>
+        <TextBlock Text="$" TextAlignment="Right" Grid.Row="2"/>
+        <TextBlock Text="{Binding Path=SubtotalCost,StringFormat=n2}" Grid.Row="2" Grid.Column="2"/>
+        <Button Click="EmptyList" Grid.Row="5" Grid.Column="0">Cancel</Button>
+        <Button Grid.Row="5" Grid.Column="1">Pay</Button>
     </Grid>
 </UserControl>

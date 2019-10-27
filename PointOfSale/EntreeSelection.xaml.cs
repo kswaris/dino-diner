@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -29,6 +30,104 @@ namespace PointOfSale
         public EntreeSelection()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// Brontowurst click event
+        /// </summary>
+        /// <param name="sender">sender object.</param>
+        /// <param name="args">routedevent argument</param>
+        public void BrontowurstClick(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new Brontowurst());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+        /// <summary>
+        /// DinoNuggets click event
+        /// </summary>
+        /// <param name="sender">sender object.</param>
+        /// <param name="args">routedevent argument</param>
+        public void DinoNuggetsClick(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new DinoNuggets());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+        /// <summary>
+        /// PrehistoricPBJ click event
+        /// </summary>
+        /// <param name="sender">sender object.</param>
+        /// <param name="args">routedevent argument</param>
+        public void PrehistoricPBJClick(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new PrehistoricPBJ());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+        /// <summary>
+        /// Pterodactyl Wings click event
+        /// </summary>
+        /// <param name="sender">sender object.</param>
+        /// <param name="args">routedevent argument</param>
+        public void PterodactylWingsClick(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new PterodactylWings());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+        /// <summary>
+        /// Steakosaurus click event
+        /// </summary>
+        /// <param name="sender">sender object.</param>
+        /// <param name="args">routedevent argument</param>
+        public void SteakosaurusBurgerClick(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new SteakosaurusBurger());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+        /// <summary>
+        /// TRexKingBurger click event
+        /// </summary>
+        /// <param name="sender">sender object.</param>
+        /// <param name="args">routedevent argument</param>
+        public void TRexKingBurgerClick(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new TRexKingBurger());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+        /// <summary>
+        /// Velociwrap click event
+        /// </summary>
+        /// <param name="sender">sender object.</param>
+        /// <param name="args">routedevent argument</param>
+        public void VelociwrapClick(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new VelociWrap());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
         }
     }
 }

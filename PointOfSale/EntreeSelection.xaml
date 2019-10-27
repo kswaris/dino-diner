@@ -31,25 +31,25 @@
         </Grid.Resources>
         <TextBlock Grid.Row="0" FontSize="20">Add To Order</TextBlock>
         <WrapPanel Grid.Row="1">
-            <Button>
+            <Button Click="BrontowurstClick">
                 <TextBlock Text="Brontowurst&#10;"></TextBlock>
             </Button>
-            <Button>
+            <Button Click="DinoNuggetsClick">
                 <TextBlock Text="Dino-Nuggets&#10;"></TextBlock>
             </Button>
-            <Button>
+            <Button Click="PrehistoricPBJClick">
                 <TextBlock Text="Prehistoric&#10;PB&amp;J"></TextBlock>
             </Button>
-            <Button>
+            <Button Click="PterodactylWingsClick">
                 <TextBlock Text="Pterodactyl&#10;Wings&#10;"></TextBlock>
             </Button>
-            <Button>
+            <Button Click="SteakosaurusBurgerClick">
                 <TextBlock Text="Steakosaurus&#10;Burger&#10;"></TextBlock>
             </Button>
-            <Button>
+            <Button Click="TRexKingBurgerClick">
                 <TextBlock Text="T-Rex&#10;KingBurger&#10;"></TextBlock>
             </Button>
-            <Button>
+            <Button Click="VelociwrapClick">
                 <TextBlock Text="Veloci-Wrap&#10;"></TextBlock>
             </Button>
         </WrapPanel>

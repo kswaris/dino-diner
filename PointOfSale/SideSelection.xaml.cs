@@ -40,12 +40,94 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Sender object</param>
         /// <param name="e">Routed event args</param>
-        public void AddFryceritops(object sender, RoutedEventArgs e)
+        public void FryceritopsClick(object sender, RoutedEventArgs e)
         {
             if(DataContext is Order order)
             {
                 order.Items.Add(new Fryceritops());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
             }
+        }
+        /// <summary>
+        /// Adds MeteorMacAndCheese
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Routed event args</param>
+        public void MeteorMacAndCheeseClick(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new MeteorMacAndCheese());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+            }
+        }
+        /// <summary>
+        /// Adds Mezzorella Sticks
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Routed event args</param>
+        public void MezzorellaSticksClick(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new MezzorellaSticks());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+            }
+        }
+        /// <summary>
+        /// Adds Triceritots
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Routed event args</param>
+        public void Triceritots(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                order.Items.Add(new Triceritots());
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+            }
+        }
+        /// <summary>
+        /// This is sidemakesmall. This makes the side small.
+        /// </summary>
+        /// <param name="sender">This is the sender</param>
+        /// <param name="args">This is the argument</param>
+        public void SideMakeSmall(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Side side)
+                {
+                    side.Size = DinoDiner.Menu.Size.Small;
+                    NavigationService?.Navigate(new MenuCategorySelection());
+                }
+        }
+        /// <summary>
+        /// This is sidemakemedium. This makes the side medium.
+        /// </summary>
+        /// <param name="sender">This is the sender</param>
+        /// <param name="args">This is the argument</param>
+        public void SideMakeMedium(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Side side)
+                {
+                    side.Size = DinoDiner.Menu.Size.Medium;
+                    NavigationService?.Navigate(new MenuCategorySelection());
+                }
+        }
+        /// <summary>
+        /// This is sidemakeLarge. This makes the side Large.
+        /// </summary>
+        /// <param name="sender">This is the sender</param>
+        /// <param name="args">This is the argument</param>
+        public void SideMakeLarge(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Side side)
+                {
+                    side.Size = DinoDiner.Menu.Size.Large;
+                    NavigationService?.Navigate(new MenuCategorySelection());
+                }
         }
     }
 }

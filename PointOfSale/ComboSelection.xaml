@@ -31,28 +31,27 @@
         </Grid.Resources>
         <TextBlock Grid.Row="0" FontSize="20">Add To Order</TextBlock>
         <WrapPanel Grid.Row="1">
-            <Button Click="BuildCombo">
-                    <TextBlock Text="Brontowurst&#10;Combo"></TextBlock>
+            <Button Click="OnBrontowurstClick">
+                <TextBlock Text="Brontowurst&#10;Combo"></TextBlock>
             </Button>
-            <Button Click="BuildCombo">
-                    <TextBlock Text="Dino-Nuggets&#10;Combo"></TextBlock>
+            <Button Click="OnDinoNuggetsClick">
+                <TextBlock Text="Dino-Nuggets&#10;Combo"></TextBlock>
             </Button>
-            <Button Click="BuildCombo">
-                    <TextBlock Text="Prehistoric&#10;PB&amp;J Combo"></TextBlock>
+            <Button Click="OnPrehistoricPBJClick">
+                <TextBlock Text="Prehistoric&#10;PB&amp;J Combo"></TextBlock>
             </Button>
-            <Button Click="BuildCombo">
-                    <TextBlock Text="Pterodactyl&#10;Wings&#10;Combo"></TextBlock>
+            <Button Click="OnPterodactylWingsClick">
+                <TextBlock Text="Pterodactyl&#10;Wings&#10;Combo"></TextBlock>
             </Button>
-            <Button Click="BuildCombo">
-                    <TextBlock Text="Steakosaurus&#10;Burger&#10;Combo"></TextBlock>
+            <Button Click="OnSteakosaurusBurgerClick">
+                <TextBlock Text="Steakosaurus&#10;Burger&#10;Combo"></TextBlock>
             </Button>
-            <Button Click="BuildCombo">
-                    <TextBlock Text="T-Rex&#10;KingBurger&#10;Combo"></TextBlock>
+            <Button Click="OnTRexKingBurgerClick">
+                <TextBlock Text="T-Rex&#10;KingBurger&#10;Combo"></TextBlock>
             </Button>
-            <Button Click="BuildCombo">
-                    <TextBlock Text="Veloci-Wrap&#10;Combo"></TextBlock>
+            <Button Click="OnVelociWrapClick">
+                <TextBlock Text="Veloci-Wrap&#10;Combo"></TextBlock>
             </Button>
         </WrapPanel>
-
     </Grid>
 </Page>

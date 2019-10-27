@@ -1011,6 +1011,17 @@
             /This is the order class.
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Order.PropertyChanged">
+            <summary>
+            /This is the propertychangedEventHandler
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            This is the notify property change.
+            </summary>
+            <param name="PropertyName">This is the propertyname string.</param>
+        </member>
         <member name="P:DinoDiner.Menu.Order.SalesTaxRate">
             <summary>
             This is the salestax rate Property.
@@ -1040,6 +1051,13 @@
             <summary>
             This is the subtotalcost property.
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.OnCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            This is the oncollectionchanged notifyer.
+            </summary>
+            <param name="sender"> This is the sender object.</param>
+            <param name="e"> This is the notifycollectionchangedargs object.</param>
         </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
