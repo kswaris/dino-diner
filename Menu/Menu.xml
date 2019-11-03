@@ -1016,12 +1016,6 @@
             /This is the propertychangedEventHandler
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Order.NotifyOfPropertyChanged(System.String)">
-            <summary>
-            This is the notify property change.
-            </summary>
-            <param name="PropertyName">This is the propertyname string.</param>
-        </member>
         <member name="P:DinoDiner.Menu.Order.SalesTaxRate">
             <summary>
             This is the salestax rate Property.
@@ -1058,6 +1052,26 @@
             </summary>
             <param name="sender"> This is the sender object.</param>
             <param name="e"> This is the notifycollectionchangedargs object.</param>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.Add(DinoDiner.Menu.IOrderItem)">
+            <summary>
+            This adds an item to the item collection.
+            </summary>
+            <param name="item">This is the item you are adding</param>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.Remove(DinoDiner.Menu.IOrderItem)">
+            <summary>
+            This removes an item from the collection
+            </summary>
+            <param name="item">This adds an item to the collectoin</param>
+            <returns>This is the item if it is successful</returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.NotifyItemChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            This is the notify item changed method
+            </summary>
+            <param name="sender">This is the object sender</param>
+            <param name="e">This is the propertychangedeventarguments</param>
         </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
