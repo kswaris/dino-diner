@@ -25,6 +25,19 @@ namespace PointOfSale
     public partial class CustomizeCombo : Page
     {
         /// <summary>
+        /// This is the cc variable
+        /// </summary>
+        private CretaceousCombo cc;
+        /// <summary>
+        /// This is the customize combo constructor
+        /// </summary>
+        /// <param name="cc">this is the combo</param>
+        public CustomizeCombo(CretaceousCombo cc)
+        {
+            InitializeComponent();
+            this.cc = cc;
+        }
+        /// <summary>
         /// This is the customize combo default constructor
         /// </summary>
         public CustomizeCombo()

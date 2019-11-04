@@ -42,7 +42,7 @@ namespace PointOfSale
             {
                 order.Items.Add(new Brontowurst());
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new BrontowurstCustomization());
             }
         }
         /// <summary>
@@ -56,7 +56,7 @@ namespace PointOfSale
             {
                 order.Items.Add(new DinoNuggets());
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new DinoNuggetsCustomization());
             }
         }
         /// <summary>
@@ -70,7 +70,7 @@ namespace PointOfSale
             {
                 order.Items.Add(new PrehistoricPBJ());
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new PrehistoricPBJCustomization());
             }
         }
         /// <summary>
@@ -98,7 +98,7 @@ namespace PointOfSale
             {
                 order.Items.Add(new SteakosaurusBurger());
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new SteakosaurusBurgerCustomization());
             }
         }
         /// <summary>
@@ -112,7 +112,7 @@ namespace PointOfSale
             {
                 order.Items.Add(new TRexKingBurger());
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new TRexKingBurgerCustomization());
             }
         }
         /// <summary>
@@ -126,7 +126,7 @@ namespace PointOfSale
             {
                 order.Items.Add(new VelociWrap());
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new VelociwrapCustomization());
             }
         }
     }
