@@ -25,16 +25,12 @@ namespace PointOfSale
     public partial class SteakosaurusBurgerCustomization : Page
     {
         private SteakosaurusBurger sb;
-        private CretaceousCombo cc;
         /// <summary>
         /// This is the steakosaurusburger constructor
         /// </summary>
         public SteakosaurusBurgerCustomization()
         {
             InitializeComponent();
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is SteakosaurusBurger steakosaurusburger)
-                    sb = steakosaurusburger;
         }
         /// <summary>
         /// This is the doneclick method.
@@ -43,64 +39,36 @@ namespace PointOfSale
         /// <param name="args">This is the object argument</param>
         public void DoneClick(object sender, RoutedEventArgs args)
         {
-            if (cc != null)
-                NavigationService.Navigate(new CustomizeCombo(cc));
-            else
                 NavigationService.Navigate(new MenuCategorySelection());
         }
         private void BunClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is SteakosaurusBurger steakosaurusburger)
-                    steakosaurusburger.HoldBun();
-            if (cc != null)
-            {
-                sb.HoldBun();
-                cc.Entree = sb;
-            }
+                    sb.HoldBun();
         }
         private void PickleClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is SteakosaurusBurger steakosaurusburger)
-                    steakosaurusburger.HoldPickle();
-            if (cc != null)
-            {
-                sb.HoldPickle();
-                cc.Entree = sb;
-            }
+                    sb.HoldPickle();
         }
         private void MustardClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is SteakosaurusBurger steakosaurusburger)
-                    steakosaurusburger.HoldMustard();
-            if (cc != null)
-            {
-                sb.HoldMustard();
-                cc.Entree = sb;
-            }
+                    sb.HoldMustard();
+        }
+        /// <summary>
+         /// This is the steakburger constructor
+         /// </summary>
+         /// <param name="bw">this is the wurst</param>
+        public SteakosaurusBurgerCustomization(SteakosaurusBurger sb)
+        {
+            this.sb = sb;
+            InitializeComponent();
         }
         private void KetchupClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is SteakosaurusBurger steakosaurusburger)
-                    steakosaurusburger.HoldKetchup();
-            if (cc != null)
-            {
-                sb.HoldKetchup();
-                cc.Entree = sb;
-            }
-        }
-        /// <summary>
-        /// This is the steakosaurusburger customizer.
-        /// </summary>
-        /// <param name="cc">this is the combo</param>
-        public SteakosaurusBurgerCustomization(CretaceousCombo cc)
-        {
-            InitializeComponent();
-            this.cc = cc;
-            this.sb = cc.Entree as SteakosaurusBurger;
+                    sb.HoldKetchup();
         }
     }
 }

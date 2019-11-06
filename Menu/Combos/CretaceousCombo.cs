@@ -141,6 +141,8 @@ namespace DinoDiner.Menu
         public CretaceousCombo(Entree entree)
         {
             this.Entree = entree;
+                        NotifyOfPropertyChanged("Entree");
+
         }
         /// <summary>
         /// This override sthe tostring method and prints it out.

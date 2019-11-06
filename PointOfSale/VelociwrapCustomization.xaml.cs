@@ -42,6 +42,15 @@ namespace PointOfSale
             this.cc = cc;
             this.vw = cc.Entree as VelociWrap;
         }
+        /// <summary>
+        /// This is the velocirap constructor
+        /// </summary>
+        /// <param name="tr">this is the trex</param>
+        public VelociwrapCustomization(VelociWrap v)
+        {
+            vw = v;
+            InitializeComponent();
+        }
         private void LettuceClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)

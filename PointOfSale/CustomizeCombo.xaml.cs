@@ -95,5 +95,50 @@ namespace PointOfSale
                 if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is CretaceousCombo combo)
                     combo.Size = DinoDiner.Menu.Size.Large;
         }
+        /// <summary>
+        /// This returns to the menu
+        /// </summary>
+        /// <param name="sender">this is the sender</param>
+        /// <param name="args"> these are the arguments</param>
+        public void DoneClick(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new MenuCategorySelection());
+        }
+        /// <summary>
+        /// This allows you to customize something
+        /// </summary>
+        /// <param name="sender">this is the sender</param>
+        /// <param name="args"> these are the arguments</param>
+        public void Customize(object sender, RoutedEventArgs args)
+        {
+            
+            if (DataContext is Order order)
+            {
+                if (cc.Entree is Brontowurst)
+                {
+                    NavigationService.Navigate(new BrontowurstCustomization(cc.Entree as Brontowurst));
+                }
+                if (cc.Entree is DinoNuggets)
+                {
+                    NavigationService.Navigate(new DinoNuggetsCustomization(cc.Entree as DinoNuggets));
+                }
+                if (cc.Entree is PrehistoricPBJ)
+                {
+                    NavigationService.Navigate(new PrehistoricPBJCustomization(cc.Entree as PrehistoricPBJ));
+                }
+                if (cc.Entree is SteakosaurusBurger)
+                {
+                    NavigationService.Navigate(new SteakosaurusBurgerCustomization(cc.Entree as SteakosaurusBurger));
+                }
+                if (cc.Entree is TRexKingBurger)
+                {
+                    NavigationService.Navigate(new TRexKingBurgerCustomization(cc.Entree as TRexKingBurger));
+                }
+                if (cc.Entree is VelociWrap)
+                {
+                    NavigationService.Navigate(new VelociwrapCustomization(cc.Entree as VelociWrap));
+                }
+            }
+        }
     }
 }

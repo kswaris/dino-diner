@@ -14,6 +14,7 @@ namespace PointOfSale
     /// </summary>
     public partial class ComboSelection : Page
     {
+        private CretaceousCombo cc;
         /// <summary>
         /// This is the default constructor
         /// </summary>
@@ -30,9 +31,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new CretaceousCombo(new Brontowurst()));
+                cc = new CretaceousCombo(new Brontowurst());
+                order.Add(cc);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new CustomizeCombo());
+                NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
         /// <summary>
@@ -44,9 +46,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new CretaceousCombo(new DinoNuggets()));
+                cc = new CretaceousCombo(new DinoNuggets());
+                order.Add(cc);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new CustomizeCombo());
+                NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
         /// <summary>
@@ -58,9 +61,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new CretaceousCombo(new PrehistoricPBJ()));
+                cc = new CretaceousCombo(new PrehistoricPBJ());
+                order.Add(cc);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new CustomizeCombo());
+                NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
         /// <summary>
@@ -72,9 +76,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new CretaceousCombo(new PterodactylWings()));
+                cc = new CretaceousCombo(new PterodactylWings());
+                order.Add(cc);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new CustomizeCombo());
+                NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
         /// <summary>
@@ -86,9 +91,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new CretaceousCombo(new SteakosaurusBurger()));
+                cc = new CretaceousCombo(new SteakosaurusBurger());
+                order.Add(cc);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new CustomizeCombo());
+                NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
         /// <summary>
@@ -100,9 +106,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new CretaceousCombo(new TRexKingBurger()));
+                cc = new CretaceousCombo(new TRexKingBurger());
+                order.Add(cc);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new CustomizeCombo());
+                NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
         /// <summary>
@@ -114,8 +121,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new CretaceousCombo(new VelociWrap()));
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                cc = new CretaceousCombo(new DinoNuggets());
+                order.Add(cc);
+ CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new CustomizeCombo());
             }
         }

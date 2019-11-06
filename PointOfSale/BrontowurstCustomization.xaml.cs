@@ -24,7 +24,6 @@ namespace PointOfSale
     /// </summary>
     public partial class BrontowurstCustomization : Page
     {
-        private CretaceousCombo cc;
         private Brontowurst bw;
         /// <summary>
         /// This is the brontowusrt construcotr
@@ -39,54 +38,32 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// This is the constructor
+        /// This is the brontowurst constructor
         /// </summary>
-        /// <param name="c">This is the combo</param>
-        public BrontowurstCustomization(CretaceousCombo c)
+        /// <param name="bw">this is the wurst</param>
+        public BrontowurstCustomization(Brontowurst bw)
         {
+            this.bw = bw;
             InitializeComponent();
-            this.cc = c;
-            this.bw = c.Entree as Brontowurst;
         }
         private void PepperClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Brontowurst brontowurst)
-                    brontowurst.HoldPeppers();
-            if (cc != null)
-            {
-                bw.HoldPeppers();
-                cc.Entree = bw;
-            }
+               bw.HoldPeppers();
         }
         private void BunClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Brontowurst brontowurst)
-                    brontowurst.HoldBun();
-            if (cc != null)
-            {
                 bw.HoldBun();
-                cc.Entree = bw;
-            }
         }
         private void OnionClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Brontowurst brontowurst)
-                    brontowurst.HoldOnion();
-            if (cc != null)
-            {
                 bw.HoldOnion();
-                cc.Entree = bw;
-            }
         }
         private void DoneClick(object sender, RoutedEventArgs arsg)
         {
-            if (cc != null)
-                NavigationService.Navigate(new CustomizeCombo(cc));
-            else
-                NavigationService.Navigate(new MenuCategorySelection());
+            NavigationService.Navigate(new MenuCategorySelection());
         }
     }
 }

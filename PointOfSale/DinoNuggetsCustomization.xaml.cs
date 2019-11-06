@@ -25,43 +25,29 @@ namespace PointOfSale
     public partial class DinoNuggetsCustomization : Page
     {
         private DinoNuggets dn;
-        private CretaceousCombo cc;
         /// <summary>
         /// This is the dinonuggets constructor
         /// </summary>
         public DinoNuggetsCustomization()
         {
             InitializeComponent();
-            if(DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoNuggets dinonuggets)
-                    dn = dinonuggets;
         }
         /// <summary>
-        /// This is the dinonuggetsconstructor
+        /// This is the brontowurst constructor
         /// </summary>
-        /// <param name="c">This is a cretacous combo</param>
-        public DinoNuggetsCustomization(CretaceousCombo c)
+        /// <param name="d">this is the nugget</param>
+        public DinoNuggetsCustomization(DinoNuggets d)
         {
+            dn = d;
             InitializeComponent();
-            this.cc = c;
-            this.dn = cc.Entree as DinoNuggets;
         }
         private void AddNuggetClick(object sender, RoutedEventArgs arsg)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoNuggets dinonuggets)
-                    dinonuggets.AddNugget();
-            if (cc != null)
-            {
-                dn.AddNugget();
-                cc.Entree = dn;
-            }
+                    dn.AddNugget();
         }
         private void DoneClick(object sender, RoutedEventArgs args)
         {
-            if (cc != null)
-                NavigationService.Navigate(new CustomizeCombo(cc));
-            else
                 NavigationService.Navigate(new MenuCategorySelection());
         }
 

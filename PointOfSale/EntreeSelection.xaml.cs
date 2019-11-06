@@ -24,6 +24,8 @@ namespace PointOfSale
     /// </summary>
     public partial class EntreeSelection : Page
     {
+        private Entree _entree;
+
         /// <summary>
         /// This is the entree selection default constructor
         /// </summary>
@@ -40,9 +42,11 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new Brontowurst());
+                Brontowurst bw = new Brontowurst();
+                _entree = bw;
+                order.Add(_entree);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new BrontowurstCustomization());
+                NavigationService.Navigate(new BrontowurstCustomization(_entree as Brontowurst));
             }
         }
         /// <summary>
@@ -54,9 +58,11 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new DinoNuggets());
+                DinoNuggets dn = new DinoNuggets();
+                _entree = dn;
+                order.Add(_entree);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new DinoNuggetsCustomization());
+                NavigationService.Navigate(new DinoNuggetsCustomization(_entree as DinoNuggets));
             }
         }
         /// <summary>
@@ -68,9 +74,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new PrehistoricPBJ());
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new PrehistoricPBJCustomization());
+                PrehistoricPBJ pbj = new PrehistoricPBJ();
+                _entree = pbj;
+                order.Add(_entree); CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new PrehistoricPBJCustomization(_entree as PrehistoricPBJ));
             }
         }
         /// <summary>
@@ -82,7 +89,8 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new PterodactylWings());
+                PterodactylWings ptw = new PterodactylWings();
+                order.Add(ptw);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new MenuCategorySelection());
             }
@@ -96,9 +104,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new SteakosaurusBurger());
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new SteakosaurusBurgerCustomization());
+                SteakosaurusBurger sb = new SteakosaurusBurger();
+                _entree = sb;
+                order.Add(_entree); CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                NavigationService.Navigate(new SteakosaurusBurgerCustomization(_entree as SteakosaurusBurger));
             }
         }
         /// <summary>
@@ -110,9 +119,11 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new TRexKingBurger());
+                TRexKingBurger tkb = new TRexKingBurger();
+                _entree = tkb;
+                order.Add(_entree);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new TRexKingBurgerCustomization());
+                NavigationService.Navigate(new TRexKingBurgerCustomization(_entree as TRexKingBurger));
             }
         }
         /// <summary>
@@ -124,9 +135,11 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new VelociWrap());
+                VelociWrap vw = new VelociWrap();
+                _entree = vw;
+                order.Add(_entree);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
-                NavigationService.Navigate(new VelociwrapCustomization());
+                NavigationService.Navigate(new VelociwrapCustomization(_entree as VelociWrap));
             }
         }
     }

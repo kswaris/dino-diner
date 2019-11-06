@@ -24,7 +24,6 @@ namespace PointOfSale
     /// </summary>
     public partial class PrehistoricPBJCustomization : Page
     {
-        private CretaceousCombo cc;
         private PrehistoricPBJ pbj;
         /// <summary>
         /// This is the prehistoricPBJCustomization
@@ -32,19 +31,14 @@ namespace PointOfSale
         public PrehistoricPBJCustomization()
         {
             InitializeComponent();
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is PrehistoricPBJ pbj)
-                    this.pbj = pbj;
         }
-        /// <summary>
-        /// This is the prehistoricPBJCustomization
+        /// This is the pbj constructor
         /// </summary>
-        /// <param name="c">This is the combo</param>
-        public PrehistoricPBJCustomization(CretaceousCombo c)
+        /// <param name="p">this is the pbj</param>
+        public PrehistoricPBJCustomization(PrehistoricPBJ p)
         {
+            pbj = p;
             InitializeComponent();
-            this.cc = c;
-            this.pbj = cc.Entree as PrehistoricPBJ;
         }
         /// <summary>
         /// This is the jellyclick
@@ -56,11 +50,6 @@ namespace PointOfSale
             if (DataContext is Order order)
                 if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is PrehistoricPBJ pbj)
                     pbj.HoldJelly();
-            if (cc != null)
-            {
-                pbj.HoldJelly();
-                cc.Entree = pbj;
-            }
         }
         
         /// <summary>
@@ -70,9 +59,6 @@ namespace PointOfSale
         /// <param name="args">This is the routedeventarguments</param>
         private void DoneClick(object sender, RoutedEventArgs args)
         {
-            if (cc != null)
-                NavigationService.Navigate(new CustomizeCombo(cc));
-            else
                 NavigationService.Navigate(new MenuCategorySelection());
         }
         /// <summary>
@@ -85,11 +71,6 @@ namespace PointOfSale
             if (DataContext is Order order)
                 if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is PrehistoricPBJ pbj)
                     pbj.HoldPeanutButter();
-            if (cc != null)
-            {
-                pbj.HoldPeanutButter();
-                cc.Entree = pbj;
-            }
         }
     }
 }
