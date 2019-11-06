@@ -24,6 +24,8 @@ namespace PointOfSale
     /// </summary>
     public partial class SideSelection : Page
     {
+        private CretaceousCombo combo;
+        private Side _side;
         /// <summary>
         /// This is the order variable
         /// </summary>
@@ -35,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+        public SideSelection(CretaceousCombo cc)
+        {
+            combo = cc;
+            InitializeComponent();
+        }
         /// <summary>
         /// Adds fryceritops
         /// </summary>
@@ -42,10 +49,18 @@ namespace PointOfSale
         /// <param name="e">Routed event args</param>
         public void FryceritopsClick(object sender, RoutedEventArgs e)
         {
-            if(DataContext is Order order)
+            if (DataContext is Order order)
             {
-                order.Items.Add(new Fryceritops());
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                _side = new Fryceritops();
+                if (combo == null)
+                {
+                    order.Add(_side);
+                    CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                }
+                else
+                {
+                    combo.Side = _side;
+                }
             }
         }
         /// <summary>
@@ -55,10 +70,18 @@ namespace PointOfSale
         /// <param name="e">Routed event args</param>
         public void MeteorMacAndCheeseClick(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order order)
+            if(DataContext is Order order)
             {
-                order.Items.Add(new MeteorMacAndCheese());
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                _side = new MeteorMacAndCheese();
+                if(combo == null)
+                {
+                    order.Add(_side);
+                    CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                }
+                else
+                {
+                    combo.Side = _side;
+                }
             }
         }
         /// <summary>
@@ -70,8 +93,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new MezzorellaSticks());
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                _side = new MezzorellaSticks();
+                if (combo == null)
+                {
+                    order.Add(_side);
+                    CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                }
+                else
+                {
+                    combo.Side = _side;
+                }
             }
         }
         /// <summary>
@@ -83,8 +114,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new Triceritots());
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                _side = new Triceritots();
+                if (combo == null)
+                {
+                    order.Add(_side);
+                    CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                }
+                else
+                {
+                    combo.Side = _side;
+                }
             }
         }
         /// <summary>
@@ -95,11 +134,18 @@ namespace PointOfSale
         public void SideMakeSmall(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Side side)
+            {
+                if (combo == null)
                 {
-                    side.Size = DinoDiner.Menu.Size.Small;
+                    _side.Size = DinoDiner.Menu.Size.Small;
                     NavigationService?.Navigate(new MenuCategorySelection());
                 }
+                else
+                {
+                    combo.Side.Size = DinoDiner.Menu.Size.Small;
+                    NavigationService?.Navigate(new CustomizeCombo());
+                }
+            }
         }
         /// <summary>
         /// This is sidemakemedium. This makes the side medium.
@@ -108,12 +154,19 @@ namespace PointOfSale
         /// <param name="args">This is the argument</param>
         public void SideMakeMedium(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Side side)
+            if(DataContext is Order order)
+            {
+                if (combo == null)
                 {
-                    side.Size = DinoDiner.Menu.Size.Medium;
+                    _side.Size = DinoDiner.Menu.Size.Medium;
                     NavigationService?.Navigate(new MenuCategorySelection());
                 }
+                else
+                {
+                    combo.Side.Size = DinoDiner.Menu.Size.Medium;
+                    NavigationService?.Navigate(new CustomizeCombo());
+                }
+            }
         }
         /// <summary>
         /// This is sidemakeLarge. This makes the side Large.
@@ -123,11 +176,27 @@ namespace PointOfSale
         public void SideMakeLarge(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Side side)
+            {
+                if (combo == null)
                 {
-                    side.Size = DinoDiner.Menu.Size.Large;
+                    _side.Size = DinoDiner.Menu.Size.Large;
                     NavigationService?.Navigate(new MenuCategorySelection());
                 }
+                else
+                {
+                    combo.Side.Size = DinoDiner.Menu.Size.Large;
+                    NavigationService?.Navigate(new CustomizeCombo());
+                }
+            }
+        }
+        /// <summary>
+        /// Alternative Constructor
+        /// </summary>
+        /// <param name="side">Side</param>
+        public SideSelection(Side side)
+        {
+            _side = side;
+            InitializeComponent();
         }
     }
 }

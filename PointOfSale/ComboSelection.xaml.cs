@@ -31,9 +31,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                cc = new CretaceousCombo(new Brontowurst());
+                CretaceousCombo c = new CretaceousCombo(new Brontowurst());
+                cc = c;
                 order.Add(cc);
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
@@ -46,9 +46,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                cc = new CretaceousCombo(new DinoNuggets());
+                CretaceousCombo c = new CretaceousCombo(new DinoNuggets());
+                cc = c;
                 order.Add(cc);
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
@@ -61,9 +61,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                cc = new CretaceousCombo(new PrehistoricPBJ());
+                CretaceousCombo c = new CretaceousCombo(new PrehistoricPBJ());
+                cc = c;
                 order.Add(cc);
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
@@ -76,9 +76,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                cc = new CretaceousCombo(new PterodactylWings());
+                CretaceousCombo c = new CretaceousCombo(new PterodactylWings());
+                cc = c;
                 order.Add(cc);
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
@@ -91,9 +91,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                cc = new CretaceousCombo(new SteakosaurusBurger());
+                CretaceousCombo c = new CretaceousCombo(new SteakosaurusBurger());
+                cc = c;
                 order.Add(cc);
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
@@ -106,9 +106,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                cc = new CretaceousCombo(new TRexKingBurger());
+                CretaceousCombo c = new CretaceousCombo(new TRexKingBurger());
+                cc = c;
                 order.Add(cc);
-                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new CustomizeCombo(cc));
             }
         }
@@ -121,9 +121,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                cc = new CretaceousCombo(new DinoNuggets());
+                CretaceousCombo c = new CretaceousCombo(new VelociWrap());
+                cc = c;
                 order.Add(cc);
- CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 NavigationService.Navigate(new CustomizeCombo());
             }
         }

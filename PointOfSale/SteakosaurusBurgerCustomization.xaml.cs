@@ -59,7 +59,7 @@ namespace PointOfSale
         /// <summary>
          /// This is the steakburger constructor
          /// </summary>
-         /// <param name="bw">this is the wurst</param>
+         /// <param name="sb">this is the wurst</param>
         public SteakosaurusBurgerCustomization(SteakosaurusBurger sb)
         {
             this.sb = sb;

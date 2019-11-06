@@ -25,6 +25,8 @@ namespace PointOfSale
     /// </summary>
     public partial class DrinkSelection : Page
     {
+        private Drink _drink;
+        private CretaceousCombo combo;
         /// <summary>
         /// This is the holdice/addice/addlemon/sweet/decaf/flavor line. It has private variables.
         /// </summary>
@@ -33,6 +35,26 @@ namespace PointOfSale
         /// This is the default constructor without arguments
         /// </summary>
         public DrinkSelection()
+        {
+            InitializeComponent();
+            ButtonSetup();
+        }
+        /// <summary>
+        /// Drink selection method
+        /// </summary>
+        /// <param name="cc">Passing in a combo</param>
+        public DrinkSelection(CretaceousCombo cc)
+        {
+            _drink = cc.Drink;
+            combo = cc;
+            InitializeComponent();
+            ButtonSetup();
+        }
+        /// <summary>
+        /// Constructor with a parameter
+        /// </summary>
+        /// <param name="drink">drink being pased in</param>
+        public DrinkSelection(Drink drink)
         {
             InitializeComponent();
             ButtonSetup();
@@ -89,7 +111,14 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new Tyrannotea());
+                Tyrannotea tea = new Tyrannotea();
+                if (combo == null)
+                {
+                    _drink = tea;
+                    order.Add(_drink);
+                }
+                else
+                    combo.Drink = tea;
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 Clearout();
                 FillPanel2.Children.Add(Sweet);
@@ -106,7 +135,14 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new Sodasaurus());
+                Sodasaurus soda = new Sodasaurus();
+                if (combo == null)
+                {
+                    _drink = soda;
+                    order.Add(_drink);
+                }
+                else
+                    combo.Drink = soda;
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 Clearout();
                 FillPanel2.Children.Add(Flavor);
@@ -122,7 +158,14 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new JurassicJava());
+                JurassicJava java = new JurassicJava();
+                if (combo == null)
+                {
+                    _drink = java;
+                    order.Add(_drink);
+                }
+                else
+                    combo.Drink = java;
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 Clearout();
                 FillPanel2.Children.Add(Decaf);
@@ -139,7 +182,14 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(new Water());
+                Water w = new Water();
+                if (combo == null)
+                {
+                    _drink = w;
+                    order.Add(_drink);
+                }
+                else
+                    combo.Drink = w;
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
                 Clearout();
                 FillPanel2.Children.Add(AddLemon);
@@ -163,7 +213,13 @@ namespace PointOfSale
         /// <param name="args">This is the routedevent argument object</param>
         public void ToFlavors(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new FlavorSelection());
+            if (combo != null)
+            {
+                NavigationService.Navigate(new FlavorSelection(combo));
+            }
+            else
+                NavigationService.Navigate(new FlavorSelection());
+
         }
         /// <summary>
         /// This is the SideMakeSmall method
@@ -172,9 +228,10 @@ namespace PointOfSale
         /// <param name="args">These are arguments.</param>
         public void DrinkMakeSmall(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Drink drink)
-                    drink.Size = DinoDiner.Menu.Size.Small;
+            if (combo == null)
+                _drink.Size = DinoDiner.Menu.Size.Small;
+            else
+                combo.Drink.Size = DinoDiner.Menu.Size.Small;
         }
         /// <summary>
         /// This is the SideMakeMedium method
@@ -183,9 +240,10 @@ namespace PointOfSale
         /// <param name="args">These are arguments.</param>
         public void DrinkMakeMedium(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Drink drink)
-                    drink.Size = DinoDiner.Menu.Size.Medium;
+            if (combo == null)
+                _drink.Size = DinoDiner.Menu.Size.Medium;
+            else
+                combo.Drink.Size = DinoDiner.Menu.Size.Medium;
         }
         /// <summary>
         /// This is the SideMakeLarge method
@@ -194,9 +252,10 @@ namespace PointOfSale
         /// <param name="args">These are arguments.</param>
         public void DrinkMakeLarge(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Drink drink)
-                    drink.Size = DinoDiner.Menu.Size.Large;
+            if (combo == null)
+                _drink.Size = DinoDiner.Menu.Size.Large;
+            else
+                combo.Drink.Size = DinoDiner.Menu.Size.Large;
         }
         /// <summary>
         /// This is the iceclick modifier. It adds/removes ice.
@@ -205,9 +264,10 @@ namespace PointOfSale
         /// <param name="args">This is the arguments</param>
         public void IceClick(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Drink drink)
-                    drink.Ice = !drink.Ice;
+            if (_drink != null)
+                _drink.Ice = !_drink.Ice;
+            if (combo != null)
+                combo.Drink.Ice = !_drink.Ice;
         }
         /// <summary>
         /// This is the Lemon Click modifier.
@@ -216,12 +276,29 @@ namespace PointOfSale
         /// <param name="args">This is the arguments</param>
         public void LemonClick(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
+            if (_drink != null)
             {
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Tyrannotea t)
-                    t.Lemon = !t.Lemon;
-                else if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Water w)
+                if (_drink is Water w)
+                {
                     w.Lemon = !w.Lemon;
+                }
+                else if (_drink is Tyrannotea t)
+                {
+                    t.Lemon = !t.Lemon;
+                }
+            }
+            if (combo != null)
+            {
+                if (combo.Drink is Water w)
+                {
+                    w.Lemon = !w.Lemon;
+                    combo.Drink = w;
+                }
+                else if (combo.Drink is Tyrannotea t)
+                {
+                    t.Lemon = !t.Lemon;
+                    combo.Drink = t;
+                }
             }
         }
         /// <summary>
@@ -231,9 +308,17 @@ namespace PointOfSale
         /// <param name="args">This is the arguments</param>
         public void SweetClick(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Tyrannotea t)
+            if(_drink != null)
+            {
+                if (_drink is Tyrannotea t)
                     t.Sweet = !t.Sweet;
+            }
+            if (combo != null)
+                if (combo.Drink is Tyrannotea t)
+                {
+                    t.Sweet = !t.Sweet;
+                    combo.Drink = t;
+                }
         }
         /// <summary>
         /// This is the decaf click modifier.
@@ -242,9 +327,17 @@ namespace PointOfSale
         /// <param name="args">This is the arguments</param>
         public void DecafClick(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is JurassicJava jj)
-                    jj.Decaf = !jj.Decaf;
+            if (_drink != null)
+            {
+                if (_drink is JurassicJava t)
+                    t.Decaf = !t.Decaf;
+            }
+            if (combo != null)
+                if (combo.Drink is JurassicJava t)
+                {
+                    t.Decaf = !t.Decaf;
+                    combo.Drink = t;
+                }
         }
         /// <summary>
         /// This is the flavorsclick modifier
@@ -262,9 +355,17 @@ namespace PointOfSale
         /// <param name="args">This is the routed event arguments argument</param>
         public void RoomForCreamClick(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is JurassicJava jj)
-                    jj.RoomForCream = !jj.RoomForCream;
+            if (_drink != null)
+            {
+                if (_drink is JurassicJava t)
+                    t.RoomForCream = !t.RoomForCream;
+            }
+            if (combo != null)
+                if (combo.Drink is JurassicJava t)
+                {
+                    t.RoomForCream = !t.RoomForCream;
+                    combo.Drink = t;
+                }
         }
         /// <summary>
         /// This returns to the menu

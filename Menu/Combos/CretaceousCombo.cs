@@ -42,6 +42,8 @@ namespace DinoDiner.Menu
             set
             {
                 entre = value;
+                entre.PropertyChanged += OnItemPropertyChanged;
+                NotifyOfPropertyChanged("Description");
                 NotifyOfPropertyChanged("Special");
                 NotifyOfPropertyChanged("Entree");
             }
@@ -58,6 +60,8 @@ namespace DinoDiner.Menu
             set
             {
                 sid = value;
+                sid.PropertyChanged += OnItemPropertyChanged;
+                NotifyOfPropertyChanged("Description");
                 NotifyOfPropertyChanged("Special");
                 NotifyOfPropertyChanged("Side");
             }
@@ -74,6 +78,9 @@ namespace DinoDiner.Menu
             set
             {
                 drin = value;
+                drin.Size = this.Size;
+                drin.PropertyChanged += OnItemPropertyChanged;
+                NotifyOfPropertyChanged("Description");
                 NotifyOfPropertyChanged("Special");
                 NotifyOfPropertyChanged("Drink");
             }
@@ -182,6 +189,13 @@ namespace DinoDiner.Menu
         protected void NotifyOfPropertyChanged(string name = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        private void OnItemPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Description");
         }
     }
 }

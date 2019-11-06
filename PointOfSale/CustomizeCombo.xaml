@@ -28,12 +28,11 @@
         <TextBlock Grid.Row="1" Grid.Column="2" FontSize="20" HorizontalAlignment="Center">Drink</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="1" FontSize="20" HorizontalAlignment="Center">Entree</TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="1" FontSize="20" HorizontalAlignment="Center">Size</TextBlock>
-        <Button Grid.Column="0" Grid.Row="2" FontSize="20">Fryceritops</Button>
-        <Button Grid.Column="2" Grid.Row="2" FontSize="20">Sodasaurus</Button>
+        <Button Click="SideStep" Grid.Column="0" Grid.Row="2" FontSize="20">Fryceritops</Button>
+        <Button Click="ToDrinks" Grid.Column="2" Grid.Row="2" FontSize="20">Sodasaurus</Button>
         <Button Click="Customize"  Grid.Column="1" Grid.Row="2" FontSize="20" AllowDrop="True">
             <TextBlock TextWrapping="Wrap">Customize Entree</TextBlock>
         </Button>
-        
         <WrapPanel Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Border Height="50" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFDDDDDD" BorderBrush="#FF707070" BorderThickness="1" Margin="10">
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">

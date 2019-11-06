@@ -31,19 +31,14 @@ namespace PointOfSale
         public BrontowurstCustomization()
         {
             InitializeComponent();
-            if (DataContext is Order order)
-            {
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Brontowurst brontowurst)
-                    bw = brontowurst;
-            }
         }
         /// <summary>
         /// This is the brontowurst constructor
         /// </summary>
-        /// <param name="bw">this is the wurst</param>
-        public BrontowurstCustomization(Brontowurst bw)
+        /// <param name="b">this is the wurst</param>
+        public BrontowurstCustomization(Brontowurst b)
         {
-            this.bw = bw;
+            bw = b;
             InitializeComponent();
         }
         private void PepperClick(object sender, RoutedEventArgs arsg)

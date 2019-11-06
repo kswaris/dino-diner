@@ -31,11 +31,11 @@ namespace PointOfSale
         /// <summary>
         /// This is the customize combo constructor
         /// </summary>
-        /// <param name="cc">this is the combo</param>
-        public CustomizeCombo(CretaceousCombo cc)
+        /// <param name="c">this is the combo</param>
+        public CustomizeCombo(CretaceousCombo c)
         {
+            cc = c;
             InitializeComponent();
-            this.cc = cc;
         }
         /// <summary>
         /// This is the customize combo default constructor
@@ -51,7 +51,7 @@ namespace PointOfSale
         /// <param name="e">This is the router object.</param>
         private void SideStep(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SideSelection());
+            NavigationService.Navigate(new SideSelection(cc));
         }
         /// <summary>
         /// This is the todrinks method, it takes you to drinks
@@ -60,7 +60,7 @@ namespace PointOfSale
         /// <param name="e">This is the argument object</param>
         private void ToDrinks(object Sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.Navigate(new DrinkSelection(cc));
         }
         /// <summary>
         /// This is the ComboMakeSmall method
@@ -70,8 +70,7 @@ namespace PointOfSale
         public void ComboMakeSmall(object sender, RoutedEventArgs args)
         {
             if(DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is CretaceousCombo combo)
-                    combo.Size = DinoDiner.Menu.Size.Small;
+                cc.Size = DinoDiner.Menu.Size.Small;
         }
         /// <summary>
         /// This is the ComboMakeMedium method
@@ -81,8 +80,7 @@ namespace PointOfSale
         public void ComboMakeMedium(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is CretaceousCombo combo)
-                    combo.Size = DinoDiner.Menu.Size.Medium;
+                cc.Size = DinoDiner.Menu.Size.Medium;
         }
         /// <summary>
         /// This is the ComboMakeLarge method
@@ -92,8 +90,7 @@ namespace PointOfSale
         public void ComboMakeLarge(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
-                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is CretaceousCombo combo)
-                    combo.Size = DinoDiner.Menu.Size.Large;
+                cc.Size = DinoDiner.Menu.Size.Large;
         }
         /// <summary>
         /// This returns to the menu

@@ -45,7 +45,7 @@ namespace PointOfSale
         /// <summary>
         /// This is the velocirap constructor
         /// </summary>
-        /// <param name="tr">this is the trex</param>
+        /// <param name="v">this is the trex</param>
         public VelociwrapCustomization(VelociWrap v)
         {
             vw = v;

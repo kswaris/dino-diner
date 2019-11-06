@@ -33,8 +33,9 @@ namespace PointOfSale
             InitializeComponent();
         }
         /// This is the pbj constructor
-        /// </summary>
+        /// <summary>
         /// <param name="p">this is the pbj</param>
+        /// </summary>
         public PrehistoricPBJCustomization(PrehistoricPBJ p)
         {
             pbj = p;

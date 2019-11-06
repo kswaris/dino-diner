@@ -25,6 +25,10 @@ namespace PointOfSale
     public partial class OrderControl : UserControl
     {
         /// <summary>
+        /// This is used for navigation
+        /// </summary>
+        public NavigationService Navigation { get; set; }
+        /// <summary>
         /// Ordercontrol
         /// </summary>
         public OrderControl()
@@ -41,7 +45,8 @@ namespace PointOfSale
             if (DataContext is Order order)
                 if (sender is FrameworkElement element)
                     if (element.DataContext is IOrderItem item)
-                        order.Items.Remove(item);
+                        order.Remove(item);
+                        //order.Items.Remove(item);
         }
         /// <summary>
         /// This is the emptylist Method.
@@ -50,8 +55,34 @@ namespace PointOfSale
         /// <param name="args"> This is the object argument.</param>
         public void EmptyList(object sender, RoutedEventArgs args)
         {
-            if (DataContext is Order order)
-                order.Items.Clear();
+            //if (DataContext is Order order)
+                //order.Items.Clear();
+        }
+        /// <summary>
+        /// On Selection Changes
+        /// </summary>
+        /// <param name="sender">This is the object sender.</param>
+        /// <param name="args"> This is the object argument.</param>
+        public void OnSelectionChanged(object sender, EventArgs args)
+        {
+            if (OrderItems.SelectedItem is Side side)
+            {
+                Navigation?.Navigate(new SideSelection(side));
+
+            }
+            else if (OrderItems.SelectedItem is Drink drink)
+            {
+                Navigation?.Navigate(new DrinkSelection(drink));
+            }
+            else if (OrderItems.SelectedItem is CretaceousCombo combo)
+            {
+                Navigation?.Navigate(new CustomizeCombo(combo));
+            }
+            else
+            {
+                Navigation?.Navigate(new MenuCategorySelection());
+            }
+
         }
     }
 }
