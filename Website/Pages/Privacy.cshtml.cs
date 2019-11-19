@@ -1,4 +1,4 @@
-﻿/* Index.cshtml.cs
+﻿/* Privacy.cshtml.cs
  * Author: Sam Waris
  */
 using System;
@@ -10,8 +10,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Website.Pages
 {
-    public class IndexModel : PageModel
+    /// <summary>
+    /// PrivacyModel class
+    /// </summary>
+    public class PrivacyModel : PageModel
     {
+        /// <summary>
+        /// This is the onget method.
+        /// </summary>
         public void OnGet()
         {
 

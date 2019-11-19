@@ -3,5 +3,10 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
-<h1>Hello World</h1>
+@using DinoDiner.Menu;
+    <img src="~/images/ddbanner.png" style="width: 25%; height: 25%; display:block;  margin-left:auto; margin-right:auto;"/>
+<p>
+    <a asp-page="About">About Page</a>
+    <a asp-page="Privacy">Privacy Page</a>
+    <a asp-page="Menu">Menu Page</a>
+</p>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Website</name>
+    </assembly>
+    <members>
+        <member name="T:Website.Pages.MenuModel">
+            <summary>
+            This is the menumodel class.
+            </summary>
+        </member>
+        <member name="P:Website.Pages.MenuModel.Menu">
+            <summary>
+            /This is the menu model.
+            </summary>
+        </member>
+        <member name="M:Website.Pages.MenuModel.OnGet">
+            <summary>
+            This is the onget class.
+            </summary>
+        </member>
+        <member name="T:Website.Pages.PrivacyModel">
+            <summary>
+            PrivacyModel class
+            </summary>
+        </member>
+        <member name="M:Website.Pages.PrivacyModel.OnGet">
+            <summary>
+            This is the onget method.
+            </summary>
+        </member>
+    </members>
+</doc>

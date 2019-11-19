@@ -1,4 +1,4 @@
-﻿/* Index.cshtml.cs
+﻿/* About.cshtml.cs
  * Author: Sam Waris
  */
 using System;
@@ -10,8 +10,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Website.Pages
 {
-    public class IndexModel : PageModel
+    /// <summary>
+    /// This is the aboutmodel 
+    /// </summary>
+    public class AboutModel : PageModel
     {
+        /// <summary>
+        /// This is the onGet method.
+        /// </summary>
         public void OnGet()
         {
 

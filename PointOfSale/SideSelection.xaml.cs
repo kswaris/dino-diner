@@ -37,6 +37,10 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// This is the side selection method.
+        /// </summary>
+        /// <param name="cc">this is the combo you're using.</param>
         public SideSelection(CretaceousCombo cc)
         {
             combo = cc;

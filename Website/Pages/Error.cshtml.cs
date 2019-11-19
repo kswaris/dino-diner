@@ -1,3 +1,6 @@
+/* Error.cshtml.cs
+ * Author: Sam Waris
+ */
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
