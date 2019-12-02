@@ -4,6 +4,16 @@
         <name>Website</name>
     </assembly>
     <members>
+        <member name="T:Website.Pages.AboutModel">
+            <summary>
+            This is the aboutmodel 
+            </summary>
+        </member>
+        <member name="M:Website.Pages.AboutModel.OnGet">
+            <summary>
+            This is the onGet method.
+            </summary>
+        </member>
         <member name="T:Website.Pages.MenuModel">
             <summary>
             This is the menumodel class.
@@ -11,12 +21,62 @@
         </member>
         <member name="P:Website.Pages.MenuModel.Menu">
             <summary>
-            /This is the menu model.
+            This is the menu menu.
+            </summary>
+        </member>
+        <member name="F:Website.Pages.MenuModel.items">
+            <summary>
+            This is the list of items, that is a list of imenuitme.s
+            </summary>
+        </member>
+        <member name="P:Website.Pages.MenuModel.removedIngredients">
+            <summary>
+            This is the removedIngredientslist.
+            </summary>
+        </member>
+        <member name="P:Website.Pages.MenuModel.maxprice">
+            <summary>
+            This is the max price float.
+            </summary>
+        </member>
+        <member name="P:Website.Pages.MenuModel.minprice">
+            <summary>
+            This is the minprice float.
+            </summary>
+        </member>
+        <member name="P:Website.Pages.MenuModel.menuCategory">
+            <summary>
+            This is the menucategory list.
+            </summary>
+        </member>
+        <member name="P:Website.Pages.MenuModel.SearchIngredients">
+            <summary>
+            This is the searchingredients bool.
+            </summary>
+        </member>
+        <member name="P:Website.Pages.MenuModel.search">
+            <summary>
+            This is the search string.
+            </summary>
+        </member>
+        <member name="M:Website.Pages.MenuModel.ItemSetup">
+            <summary>
+            This is the private item setup method.
             </summary>
         </member>
         <member name="M:Website.Pages.MenuModel.OnGet">
             <summary>
-            This is the onget class.
+            This is the onget method.
+            </summary>
+        </member>
+        <member name="P:Website.Pages.MenuModel.EmptyItems">
+            <summary>
+            This is used for checking if the list of items is completely empty.
+            </summary>
+        </member>
+        <member name="M:Website.Pages.MenuModel.OnPost">
+            <summary>
+            This is the method that handles search button clicks.
             </summary>
         </member>
         <member name="T:Website.Pages.PrivacyModel">

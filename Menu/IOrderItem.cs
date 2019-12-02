@@ -25,5 +25,9 @@ namespace DinoDiner.Menu
         /// This is the special string array getter property.
         /// </summary>
         string[] Special { get; }
+        /// <summary>
+        /// This is the list of ingredients.
+        /// </summary>
+        List<string> Ingredients { get; }
     }
 }

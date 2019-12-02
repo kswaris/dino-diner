@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Website.Pages
-{
-    /// <summary>
+namespace Website.Pages { 
+   /// <summary>
     /// PrivacyModel class
     /// </summary>
     public class PrivacyModel : PageModel

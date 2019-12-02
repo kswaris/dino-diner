@@ -970,6 +970,11 @@
             This is the special string array getter property.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Ingredients">
+            <summary>
+            This is the list of ingredients.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Menu">
             <summary>
             This defines the menu class.
@@ -1000,11 +1005,50 @@
             This is the availableEntree list getter property.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Menu.PossibleIngredients">
+            <summary>
+            This is the possible ingredients method. It 
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Menu.ToString">
             <summary>
             This is the tostring override.
             </summary>
             <returns>This string contains information.</returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.CategoryFilter(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem}[],System.Collections.Generic.List{System.String})">
+            <summary>
+            This is used for filtering by category
+            </summary>
+            <param name="items">These are the items you're searching by</param>
+            <param name="search">This is the term you're searching with</param>
+            <returns>This is the list of results.</returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.PriceFilter(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem}[],System.Single,System.Single)">
+            <summary>
+            This is the pricefilter method.
+            </summary>
+            <param name="items">This is the list of items you're searching through</param>
+            <param name="minPrice">This is the minimum price you want.</param>
+            <param name="maxPrice">This is the maxmimum price you want</param>
+            <returns>This is the list of results.</returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.IngredientsFilter(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem}[],System.Collections.Generic.List{System.String})">
+            <summary>
+            This is the filter by ingredients method.
+            </summary>
+            <param name="items">This is the list you're filtering.</param>
+            <param name="removedIngredients">This is the listblacklist</param>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.SearchWithPhrase(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem}[],System.String,System.Boolean)">
+            <summary>
+            This is the search with phrase method.
+            </summary>
+            <param name="items">This is the items you're searching throug</param>
+            <param name="phrase">This is the phrase you're searching with</param>
+            <param name="ingredients">This is the list of ingredients.</param>
+            <returns></returns>
         </member>
         <member name="T:DinoDiner.Menu.Order">
             <summary>

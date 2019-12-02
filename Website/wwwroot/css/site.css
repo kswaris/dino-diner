@@ -12,3 +12,22 @@ body {
     padding-right: 15px;
 }
 
+.menu-item {
+    color: darkblue;
+}
+
+.form-container {
+    width: 99vw;
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+form {
+    background-color: gray;
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    min-width: 300px;
+}
